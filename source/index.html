@@ -15,30 +15,28 @@
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">Открыть меню</button>
-      <div class="nav__wrapper">
-          <ul class="nav__list menu-list">
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="form.html">Вязание на заказ</a>
-              </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="">Поиск по сайту</a>
-              </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="">Корзина: <span class="cart-items-count">пока пуста</span></a>
-              </li>
-            </ul>
+      <div class="wrapper">
+        <ul class="nav__list menu">
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Поиск по сайту</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Корзина: <span class="cart-items-count">пока пуста</span></a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
 
   <main class="page-main">
     <section class="intro">
-      <div class="intro__title">
-        <h1 class="intro__text">Милые штучки ручной работы для дома</h1>
-      </div>
+      <h1 class="intro__title">Милые штучки ручной работы для дома</h1>
       <div class="intro__menu categories">
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories__list">
@@ -51,9 +49,9 @@
     <section class="top-products">
       <h2 class="visually-hidden">Топовые товары</h2>
       <article class="week-product">
-        <div class="week-product__wrapper">
+        <div class="wrapper">
           <h3 class="week-product__title">Вязанные корзинки</h3>
-          <h4 class="week-product__subtitle">Товар недели</h4>
+          <p class="week-product__subtitle">Товар недели</p>
           <p class="week-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
             размерах.</p>
           <table class="week-product__parameters">
@@ -78,22 +76,22 @@
       </article>
     </section>
 
-    <section class="about-us">
-      <div class="about-us__wrapper">
-        <h2>Коротко о нас:</h2>
-        <ul class="about__us-list advanteges-list">
-          <li class="adventeges-list__item">Экологически чистые материалы</li>
-          <li class="adventeges-list__item">Скандинавский стиль по российской цене</li>
-          <li class="adventeges-list__item">Увеличивает лайки на фотографиях</li>
-          <li class="adventeges-list__item">Связано вручную с любовью и умилением</li>
-          <li class="adventeges-list__item">Поддержка отечественного производителя</li>
-          <li class="adventeges-list__item">Поставляется в подарочной упаковке</li>
+    <section class="about">
+      <div class="wrapper">
+        <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__list">
+          <li class="about__item">Экологически чистые материалы</li>
+          <li class="about__item">Скандинавский стиль по российской цене</li>
+          <li class="about__item">Увеличивает лайки на фотографиях</li>
+          <li class="about__item">Связано вручную с любовью и умилением</li>
+          <li class="about__item">Поддержка отечественного производителя</li>
+          <li class="about__item">Поставляется в подарочной упаковке</li>
         </ul>
       </div>
     </section>
 
     <section class="reviews">
-      <div class="reviews__wrapper slider">
+      <div class="wrapper slider">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
@@ -115,11 +113,11 @@
     </section>
 
     <section class="contacts">
-      <div class="contacts_wrapper">
+      <div class="wrapper">
         <h2 class="contacts__title">Контакты</h2>
         <p class="contacts__email">
           <span class="contacts__type">e-mail:</span>
-          <span class="contacts__text">info@mimimishkashop.ru</span>
+          <span class="contacts__text"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
         </p>
         <p class="contacts__address">
           <span class="contacts__type">адрес:</span>
@@ -139,7 +137,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
+    <div class="wrapper">
 
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -198,15 +196,28 @@
     </div>
   </footer>
 
-  <section class="modal modal-add-to-cart">
-    <h2 class="modal-add-to-cart__title">Добавить в корзину</h2>
-    <p class="modal-add-to-cart__text">Выберите размер:</p>
-    <ul class="modal-add-to-cart__list sizes-list">
-      <li class="sizes-list__item">s</li>
-      <li class="sizes-list__item">m</li>
-      <li class="sizes-list__item">l</li>
-    </ul>
-    <button class="button modal-add-to-cart__add" type="button">Добавить</button>
+  <section class="popup">
+    <h2 class="popup__title">Добавить в корзину</h2>
+    <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="popup__group">
+        <legend class="popup__text">Выберите размер:</legend>
+        <ul class="popup__list sizes">
+          <li class="sizes__item">
+            <input class="visually-hidden" type="radio" name="size" id="size-s" value="size-s">
+            <label for="size-s">S</label>
+          </li>
+          <li class="sizes__item">
+            <input class="visually-hidden" type="radio" name="size" id="size-m" value="size-m">
+            <label for="size-s">M</label>
+          </li>
+          <li class="sizes__item">
+            <input class="visually-hidden" type="radio" name="size" id="size-l" value="size-l">
+            <label for="size-s">L</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="button popup__add" type="submit">Добавить</button>
+    </form>
   </section>
 
 </body>

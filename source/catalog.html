@@ -15,19 +15,19 @@
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">Открыть меню</button>
-      <div class="nav__wrapper">
-          <ul class="nav__list menu-list">
-              <li class="menu-list__item">
-                <a class="menu-list__link">Каталог товаров</a>
+      <div class="wrapper">
+          <ul class="nav__list menu">
+              <li class="menu__item">
+                <a class="menu__link">Каталог товаров</a>
               </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="form.html">Вязание на заказ</a>
+              <li class="menu__item">
+                <a class="menu__link" href="form.html">Вязание на заказ</a>
               </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="">Поиск по сайту</a>
+              <li class="menu__item">
+                <a class="menu__link" href="">Поиск по сайту</a>
               </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="">Корзина: <span class="cart-items-count">пока пуста</span></a>
+              <li class="menu__item">
+                <a class="menu__link" href="">Корзина: <span class="cart-items-count">пока пуста</span></a>
               </li>
             </ul>
       </div>
@@ -36,39 +36,39 @@
 
   <main class="page-main">
     <section class="catalog">
-      <div class="catalog__wrapper">
+      <div class="wrapper">
         <h2 class="catalog__title">Каталог товаров</h2>
-        <ul class="ctalog__list products-list">
-          <li class="products-list__item">
-            <article class="products-list__product">
-              <h3 class="products-list__title">Зайчик-попрыгайчик</h3>
-              <img class="products-list__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+        <ul class="catalog__list goods">
+          <li class="goods__item">
+            <article class="goods__product">
+              <h3 class="goods__title">Зайчик-попрыгайчик</h3>
+              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195"
                 alt="Изображение Зайчик-попрыгайчик">
-              <p class="products-list__parameters">Рост 30 см, вес 200 г</p>
-              <p class="products-list__price">1200 руб.</p>
-              <button class="button products-list__add-to-cart" type="button">Добавить в корзину</button>
+              <p class="goods__parameters">Рост 30 см, вес 200 г</p>
+              <p class="goods__price">1200 руб.</p>
+              <button class="button goods__add-to-cart" type="button">Добавить в корзину</button>
             </article>
           </li>
 
-          <li class="products-list__item">
-            <article class="products-list__product">
-              <h3 class="products-list__title">Корзинка для белья</h3>
-              <img class="products-list__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+          <li class="goods__item">
+            <article class="goods__product">
+              <h3 class="goods__title">Корзинка для белья</h3>
+              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195"
                 alt="Изображение Корзинка для белья">
-              <p class="products-list__parameters">Диаметр 15 см, высота 10 см</p>
-              <p class="products-list__price">690 руб.</p>
-              <button class="button products-list__add-to-cart" type="button">Добавить в корзину</button>
+              <p class="goods__parameters">Диаметр 15 см, высота 10 см</p>
+              <p class="goods__price">690 руб.</p>
+              <button class="button goods__add-to-cart" type="button">Добавить в корзину</button>
             </article>
           </li>
 
-          <li class="products-list__item">
-            <article class="products-list__product">
-              <h3 class="products-list__title">Большая корзинка для игрушек</h3>
-              <img class="products-list__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+          <li class="goods__item">
+            <article class="goods__product">
+              <h3 class="goods__title">Большая корзинка для игрушек</h3>
+              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195"
                 alt="Изображение Большая корзинка для игрушек">
-              <p class="products-list__parameters">Диаметр 30 см, высота 30 см</p>
-              <p class="products-list__price">1 500 руб.</p>
-              <button class="button products-list__add-to-cart" type="button">Добавить в корзину</button>
+              <p class="goods__parameters">Диаметр 30 см, высота 30 см</p>
+              <p class="goods__price">1 500 руб.</p>
+              <button class="button goods__add-to-cart" type="button">Добавить в корзину</button>
             </article>
           </li>
         </ul>
@@ -76,7 +76,7 @@
     </section>
 
     <article class="how-its-made">
-      <div class="how-its-made__wrapper">
+      <div class="wrapper">
         <h3>Процесс производства</h3>
         <video src="" poster="https://via.placeholder.com/260x150" width="260" height="150"></video>
         <p class="how-its-made__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
@@ -87,7 +87,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
+    <div class="wrapper">
 
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -146,15 +146,28 @@
     </div>
   </footer>
 
-  <section class="modal modal-add-to-cart">
-    <h2 class="modal-add-to-cart__title">Добавить в корзину</h2>
-    <p class="modal-add-to-cart__text">Выберите размер:</p>
-    <ul class="modal-add-to-cart__list sizes-list">
-      <li class="sizes-list__item">s</li>
-      <li class="sizes-list__item">m</li>
-      <li class="sizes-list__item">l</li>
-    </ul>
-    <button class="button modal-add-to-cart__add" type="button">Добавить</button>
+  <section class="popup">
+    <h2 class="popup__title">Добавить в корзину</h2>
+    <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="popup__group">
+        <legend class="popup__text">Выберите размер:</legend>
+        <ul class="popup__list sizes">
+          <li class="sizes__item">
+            <input class="visually-hidden" type="radio" name="size" id="size-s" value="size-s">
+            <label for="size-s">S</label>
+          </li>
+          <li class="sizes__item">
+            <input class="visually-hidden" type="radio" name="size" id="size-m" value="size-m">
+            <label for="size-s">M</label>
+          </li>
+          <li class="sizes__item">
+            <input class="visually-hidden" type="radio" name="size" id="size-l" value="size-l">
+            <label for="size-s">L</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="button popup__add" type="submit">Добавить</button>
+    </form>
   </section>
 
 </body>
