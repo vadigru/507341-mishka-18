@@ -9,131 +9,81 @@
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
         alt="Логотип магазина MISHKA">
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">Открыть меню</button>
       <div class="wrapper">
-        <ul class="nav__list menu">
-          <li class="menu__item">
-            <a class="menu__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">Поиск по сайту</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">Корзина: <span class="cart-items-count">пока пуста</span></a>
-          </li>
-        </ul>
+          <ul class="nav__list menu">
+              <li class="menu__item">
+                <a class="menu__link">Каталог товаров</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="form.html">Вязание на заказ</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Поиск по сайту</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Корзина: <span class="cart-items-count">пока пуста</span></a>
+              </li>
+            </ul>
       </div>
     </nav>
   </header>
 
   <main class="page-main">
-    <section class="intro">
-      <h1 class="intro__title">Милые штучки ручной работы для дома</h1>
-      <div class="intro__menu categories">
-        <h2 class="visually-hidden">Категории товаров</h2>
-        <ul class="categories__list">
-          <li class="categories__item"><a href="">Предметы интерьера</a></li>
-          <li class="categories__item"><a href="">Детские игрушки</a></li>
+    <section class="catalog">
+      <div class="wrapper">
+        <h2 class="catalog__title">Каталог товаров</h2>
+        <ul class="catalog__list goods">
+          <li class="goods__item">
+            <article class="goods__product">
+              <h3 class="goods__title">Зайчик-попрыгайчик</h3>
+              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+                alt="Изображение Зайчик-попрыгайчик">
+              <p class="goods__parameters">Рост 30 см, вес 200 г</p>
+              <p class="goods__price">1200 руб.</p>
+              <button class="button goods__add-to-cart" type="button">Добавить в корзину</button>
+            </article>
+          </li>
+
+          <li class="goods__item">
+            <article class="goods__product">
+              <h3 class="goods__title">Корзинка для белья</h3>
+              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+                alt="Изображение Корзинка для белья">
+              <p class="goods__parameters">Диаметр 15 см, высота 10 см</p>
+              <p class="goods__price">690 руб.</p>
+              <button class="button goods__add-to-cart" type="button">Добавить в корзину</button>
+            </article>
+          </li>
+
+          <li class="goods__item">
+            <article class="goods__product">
+              <h3 class="goods__title">Большая корзинка для игрушек</h3>
+              <img class="goods__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+                alt="Изображение Большая корзинка для игрушек">
+              <p class="goods__parameters">Диаметр 30 см, высота 30 см</p>
+              <p class="goods__price">1 500 руб.</p>
+              <button class="button goods__add-to-cart" type="button">Добавить в корзину</button>
+            </article>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section class="top-products">
-      <h2 class="visually-hidden">Топовые товары</h2>
-      <article class="week-product">
-        <div class="wrapper">
-          <h3 class="week-product__title">Вязанные корзинки</h3>
-          <p class="week-product__subtitle">Товар недели</p>
-          <p class="week-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
-            размерах.</p>
-          <table class="week-product__parameters">
-            <tr>
-              <td class="week-product__parameter">Цвет:</td>
-              <td class="week-product__value">"Тиффани"/серый</td>
-            </tr>
-            <tr>
-              <td class="week-product__parameter">Диаметр:</td>
-              <td class="week-product__value">25 см</td>
-            </tr>
-            <tr>
-              <td class="week-product__parameter">Высота:</td>
-              <td class="week-product__value">15 см</td>
-            </tr>
-          </table>
-          <img class="week-product__image" src="https://via.placeholder.com/260x315" width="260" height="315"
-            alt="Фотография вязанных корзинок цвета">
-          <p class="week-product__price">Цена: 990 руб.</p>
-          <button class="button week-product__order" type="button">Заказать</button>
-        </div>
-      </article>
-    </section>
-
-    <section class="about">
+    <article class="how-its-made">
       <div class="wrapper">
-        <h2 class="about__title">Коротко о нас:</h2>
-        <ul class="about__list">
-          <li class="about__item">Экологически чистые материалы</li>
-          <li class="about__item">Скандинавский стиль по российской цене</li>
-          <li class="about__item">Увеличивает лайки на фотографиях</li>
-          <li class="about__item">Связано вручную с любовью и умилением</li>
-          <li class="about__item">Поддержка отечественного производителя</li>
-          <li class="about__item">Поставляется в подарочной упаковке</li>
-        </ul>
+        <h3>Процесс производства</h3>
+        <video src="" poster="https://via.placeholder.com/260x150" width="260" height="150"></video>
+        <p class="how-its-made__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+          появляются наши товары.</p>
+        <a class="button how-its-made__order" href="">Сделать заказ</a>
       </div>
-    </section>
-
-    <section class="reviews">
-      <div class="wrapper slider">
-        <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item">
-            <p class="reviews__text">
-              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
-              инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
-              стильными, а также набирают больше лайков!
-            </p>
-            <cite class="reviews__author-name">
-              Анастасия Красильникова
-              <span class="reviews__author-nickname">@misssssiskras</span>
-            </cite>
-          </blockquote>
-          <button class="review__prev" type="button">Предыдущий отзыв</button>
-          <button class="review__next" type="button">Следующий отзыв</button>
-        </div>
-        <a class="reviews__write button" href="">Написать</a>
-      </div>
-    </section>
-
-    <section class="contacts">
-      <div class="wrapper">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__email">
-          <span class="contacts__type">e-mail:</span>
-          <span class="contacts__text"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
-        </p>
-        <p class="contacts__address">
-          <span class="contacts__type">адрес:</span>
-          <span class="contacts__text">
-            г. Санкт-Петербург,
-            ул. Большая Конюшенная,
-            д. 19/8, офис 101
-          </span>
-        </p>
-        <p class="contacts__map">
-          <img src="https://via.placeholder.com/322x457" width="322" height="457"
-            alt="Отображение местопложения магазина на карте">
-        </p>
-        <a class="button contacts__write" href="">Напишите нам</a>
-      </div>
-    </section>
+    </article>
   </main>
 
   <footer class="page-footer">
