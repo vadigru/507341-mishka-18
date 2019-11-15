@@ -1,6 +1,7 @@
 .reviews {
   @include font(15px, 30px, normal, $greyish-brown);
   margin-bottom: 45px;
+
   &__title {
     @include font(25px, 30px, bold);
   }
