@@ -1,0 +1,8 @@
+.about {
+  @include font(17px, 20px, bold);
+  margin-bottom: 56px;
+
+  &__title {
+    @include font(25px, 30px, bold);
+  }
+}

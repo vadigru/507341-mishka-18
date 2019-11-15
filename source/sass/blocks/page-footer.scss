@@ -1,0 +1,19 @@
+.page-footer {
+  background-color: $grey;
+}
+
+.social {
+  &__btn {
+    font-size: 0;
+  }
+}
+
+.copyright {
+  &__text {
+    @include font(19px, 18px, bold);
+  }
+
+  path {
+    fill: $teal;
+  }
+}

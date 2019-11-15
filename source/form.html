@@ -4,19 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
+      <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35"
         alt="Логотип магазина MISHKA">
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">Открыть меню</button>
       <div class="wrapper">
-        <ul class="nav__list menu">
+        <ul class="list-no-style nav__list menu">
           <li class="menu__item">
             <a class="menu__link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -36,22 +37,22 @@
 
   <main class="page-main">
     <section class="order-form">
+      <h2 class="order-form__title">Вязание на заказ</h2>
       <div class="wrapper">
-        <h2 class="order-form__title">Вязание на заказ</h2>
-        <p class="order-from__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
           свяжемся с вами, чтобы уточнить детали.</p>
         <form action="https://echo.htmlacademy.ru" method="post">
 
           <fieldset class="order-form__block">
             <legend class="order-form__heading">Тип</legend>
-            <ul class="order-form__list type">
+            <ul class="list-no-style order-form__list type">
               <li class="type__item">
-                <input class="type__input type__input--radio" id="accesories" type="radio" name="type"
+                <input class="visually-hidden type__input type__input--radio" id="accesories" type="radio" name="type"
                   value="interior accessory" checked>
                 <label class="type__label type__label--radio" for="accesories">Аксессуар для интерьера</label>
               </li>
               <li class="type__item">
-                <input class="type__input type__input--radio" id="kids-toy" type="radio" name="type"
+                <input class="visually-hidden type__input type__input--radio" id="kids-toy" type="radio" name="type"
                   value="children toy">
                 <label class="type__label type__label--radio" for="kids-toy">Детская игрушка</label>
               </li>
@@ -60,35 +61,35 @@
 
           <fieldset class="order-form__block">
             <legend class="order-form__heading">Цвет</legend>
-            <ul class="order-form__list color">
+            <ul class="list-no-style order-form__list color">
               <li class="color__item">
-                <input class="color__input color__input--checkbox" id="white" type="checkbox" name="color"
-                  value="white" checked>
+                <input class="visually-hidden color__input color__input--checkbox" id="white" type="checkbox"
+                  name="color" value="white" checked>
                 <label class="color__label color__label--checkbox" for="white">Белый</label>
               </li>
               <li class="color__item">
-                <input class="color__input color__input--checkbox" id="grey" type="checkbox" name="color"
-                  value="grey" checked>
+                <input class="visually-hidden color__input color__input--checkbox" id="grey" type="checkbox"
+                  name="color" value="grey" checked>
                 <label class="color__label color__label--checkbox" for="grey">Серый</label>
               </li>
               <li class="color__item">
-                <input class="color__input color__input--checkbox" id="tiffany" type="checkbox" name="color"
-                  value="tiffany">
+                <input class="visually-hidden color__input color__input--checkbox" id="tiffany" type="checkbox"
+                  name="color" value="tiffany">
                 <label class="color__label color__label--checkbox" for="tiffany">&#171;Тиффани&#187;</label>
               </li>
               <li class="color__item">
-                <input class="color__input color__input--checkbox" id="black" type="checkbox" name="color"
-                  value="black">
+                <input class="visually-hidden color__input color__input--checkbox" id="black" type="checkbox"
+                  name="color" value="black">
                 <label class="color__label color__label--checkbox" for="black">Черный</label>
               </li>
               <li class="color__item">
-                <input class="color__input color__input--checkbox" id="pink" type="checkbox" name="color"
-                  value="pink">
+                <input class="visually-hidden color__input color__input--checkbox" id="pink" type="checkbox"
+                  name="color" value="pink">
                 <label class="color__label color__label--checkbox" for="pink">Розовый</label>
               </li>
               <li class="color__item">
-                <input class="color__input color__input--checkbox" id="orange" type="checkbox" name="color"
-                  value="orange">
+                <input class="visually-hidden color__input color__input--checkbox" id="orange" type="checkbox"
+                  name="color" value="orange">
                 <label class="color__label color__label--checkbox" for="orange">Оранжевый</label>
               </li>
             </ul>
@@ -96,7 +97,7 @@
 
           <fieldset class="order-form__block">
             <legend class="order-form__heading">ФИО</legend>
-            <ul class="order-form__list name">
+            <ul class="list-no-style order-form__list name">
               <li class="name__item">
                 <label class="name__label name__label--text" for="name">Имя:</label>
                 <input class="name__input name__input--text" id="name" type="text" name="name"
@@ -117,7 +118,7 @@
 
           <fieldset class="order-form__block">
             <legend class="order-form__heading">ТЕЛ</legend>
-            <ul class="order-form__list phone">
+            <ul class="list-no-style order-form__list phone">
               <li class="phone__item">
                 <input class="phone__input phone__input--phone" id="phone" type="tel" name="phone"
                   placeholder="+7 ХХХ ХХХ ХХ ХХ*">
@@ -127,7 +128,7 @@
 
           <fieldset class="order-form__block">
             <legend class="order-form__heading">E-MAIL</legend>
-            <ul class="order-form__list email">
+            <ul class="list-no-style order-form__list email">
               <li class="email__item">
                 <input class="email__input email__input--text" id="email" type="email" name="email"
                   placeholder="Ваш Email*">
@@ -137,7 +138,7 @@
 
           <fieldset class="order-form__block">
             <legend class="order-form__heading">ДОП</legend>
-            <ul class="order-form__list additional-info">
+            <ul class="list-no-style order-form__list additional-info">
               <li class="additional-info__item">
                 <textarea class="additional-info__text" rows="8" cols="20"
                   placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -158,10 +159,10 @@
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper">
+    <!-- <div class="wrapper"> -->
 
       <div class="page-footer__social social">
-        <ul class="social__list">
+        <ul class="list-no-style social__list">
           <li class="social__item">
             <div class="social__link social__link--instagram">
               <a class="social__btn instagram" href=""> Mishka в инстаграме
@@ -205,7 +206,7 @@
 
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="button copyright__link">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
             <title>Узнай больше о htmlacademy</title>
             <path fill="#000"
@@ -214,7 +215,7 @@
         </a>
       </div>
 
-    </div>
+    <!-- </div> -->
   </footer>
 
 </body>

@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $white;
+
+  // width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.block {
+  box-sizing: content-box;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  color: $greyish-brown;
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+
+  width: 258px;
+  height: 49px;
+
+  background-color: $white;
+  border: 2px solid $greyish-brown;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.list-no-style {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+// временная обводка крупных блоков
+header {
+  outline: 2px solid mediumseagreen;
+}
+
+section {
+  margin: 0;
+  outline: 2px solid indianred;
+}
+
+article {
+  border: 2px solid skyblue;
+}
+
+footer {
+  outline: 2px solid indigo;
+}

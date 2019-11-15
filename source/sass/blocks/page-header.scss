@@ -1,0 +1,10 @@
+.menu {
+  @include font(17px, 24px, bold);
+
+  color: $black;
+  list-style: none;
+
+  &__link {
+    color: $black;
+  }
+}

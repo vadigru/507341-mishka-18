@@ -1,0 +1,38 @@
+.order-form {
+  margin-bottom: 55px;
+
+  &__title {
+    @include font(27px, 30px, bold);
+    background-color: $grey;
+    text-align: center;
+    padding: 74px 0;
+  }
+
+  &__text {
+    @include font(13px, 24px, normal, $greyish-brown);
+  }
+
+  &__block {
+    padding: 0;
+
+    border: 0;
+    border-top: 1px solid $teal;
+  }
+
+  &__heading {
+    @include font(17px, 16px, bold, $teal);
+    text-transform: uppercase;
+
+    padding-left: 0;
+
+    background-color: $white;
+  }
+}
+
+.type,
+.color,
+.name {
+  &__label {
+    @include font(17px, 18px, bold);
+  }
+}
