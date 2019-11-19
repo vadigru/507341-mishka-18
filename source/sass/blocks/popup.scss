@@ -1,29 +1,25 @@
-.popup {
-  &__title {
-    @include font(25px, 30px, bold);
-    text-transform: uppercase;
-  }
-
-  &__group {
-    border: 0;
-  }
-
-  &__text {
-    @include font(15px, 30px, normal, $greyish-brown);
-  }
-
-  &__add {
-    color: $white;
-    background-color: $teal;
-    border: none;
-
-    width: 260px;
-    height: 52px;
-  }
+.popup__title {
+  @include font(25px, 30px, bold);
+  text-transform: uppercase;
 }
 
-.sizes {
-  &__item {
-    @include font(17px, 16px, bold, $greyish-brown);
-  }
+.popup__group {
+  border: 0;
+}
+
+.popup__text {
+  @include font(15px, 30px, normal, $greyish-brown);
+}
+
+.popup__add {
+  color: $white;
+  background-color: $teal;
+  border: none;
+
+  width: 260px;
+  height: 52px;
+}
+
+.sizes__item {
+  @include font(17px, 16px, bold, $greyish-brown);
 }

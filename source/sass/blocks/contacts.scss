@@ -1,12 +1,12 @@
 .contacts {
   @include font(15px, 30px, normal, $greyish-brown);
   margin-bottom: 39px;
+}
 
-  &__title {
-    @include font(18px, 30px, bold);
-  }
+.contacts__title {
+  @include font(18px, 30px, bold);
+}
 
-  &__map {
-    margin-bottom: 29px;
-  }
+.contacts__map {
+  margin-bottom: 29px;
 }

@@ -9,8 +9,7 @@
 body {
   font-family: $font-primary;
   background-color: $white;
-
-  // width: 320px;
+  min-width: 320px;
 }
 
 a {
@@ -73,24 +72,104 @@ img {
 
 .list-no-style {
   list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
+.wrapper {
+  margin: 0 auto;
+  width: 320px;
+
+  // временно для обводки
+  position: relative;
+  outline: 2px solid magenta;
+
+  &::before {
+    content: attr(class);
+    background-color: magenta;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+
+  .wrapper {
+    width: 772px;
+  }
+}
+
+@media (min-width: 1150px) {
+  body {
+    min-width: 1050px;
+  }
+
+  .wrapper {
+    width: 1150px;
+  }
+}
 // временная обводка крупных блоков
 header {
+  position: relative;
   outline: 2px solid mediumseagreen;
+
+  &::before {
+    content: attr(class);
+    width: auto;
+    height: auto;
+    background-color: mediumseagreen;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
+
 section {
-  margin: 0;
+  position: relative;
   outline: 2px solid indianred;
+
+  &::before {
+    content: attr(class);
+    background-color: indianred;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 article {
-  border: 2px solid skyblue;
+  position: relative;
+  box-shadow: inset 0 0 0 2px skyblue;
+
+
+  &::before {
+    content: attr(class);
+    background-color: skyblue;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 footer {
+  position: relative;
   outline: 2px solid indigo;
+
+  &::before {
+    content: attr(class);
+    background-color: indigo;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

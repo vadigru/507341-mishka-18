@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -10,35 +11,49 @@
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35"
-        alt="Логотип магазина MISHKA">
-    </a>
-    <nav class="nav">
-      <button class="nav__toggle" type="button">Открыть меню</button>
-      <div class="wrapper">
+    <div class="wrapper">
+      <div class="page-header__logo">
+        <a class="page-header__link" href="index.html">
+          <img class="page-header__logo-image" src="./img/logo-mobile.svg" width="86" height="35"
+            alt="Логотип магазина MISHKA">
+        </a>
+        <button class="page-header__menu-toggle" type="button">Меню</button>
+      </div>
+
+      <nav class="nav">
         <ul class="list-no-style nav__list menu">
-          <li class="menu__item">
+          <li class="menu__item menu__item--catalog">
             <a class="menu__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--order">
             <a class="menu__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">Поиск по сайту</a>
+          <li class="menu__item menu__item--search">
+            <button class="menu__search-btn" type="submit">Поиск</button>
+            <a class="menu__link menu__link--hide" href="">Поиск по сайту</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item menu__item--cart">
+            <button class="menu__cart-btn" type="submit">Корзина</button>
             <a class="menu__link" href="">Корзина: <span class="cart-items-count">пока пуста</span></a>
           </li>
+          <li class="menu__item menu__item--new">
+            <a class="menu__link" href="">Новые поступления</a>
+          </li>
+          <li class="menu__item menu__item--sale">
+            <a class="menu__link" href="">Распродажа</a>
+          </li>
+          <li class="menu__item menu__item--delivery">
+            <a class="menu__link" href="">Бесплатная доставка по России</a>
+          </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
     <section class="intro">
-      <div class="intro__block">
-        <h1 class="intro__title">Милые штучки ручной работы для дома</h1>
+      <div class="wrapper intro__block">
+        <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
         <div class="intro__menu categories">
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="list-no-style categories__list">
@@ -153,7 +168,7 @@
   </main>
 
   <footer class="page-footer">
-    <!-- <div class="wrapper"> -->
+    <div class="wrapper">
 
     <div class="page-footer__social social">
       <ul class="list-no-style social__list">
@@ -209,7 +224,7 @@
       </a>
     </div>
 
-    <!-- </div> -->
+    </div>
   </footer>
 
   <section class="popup">

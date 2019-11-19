@@ -1,0 +1,20 @@
+.production {
+  outline: 1px solid $white-four;
+  margin-bottom: 58px;
+}
+
+.production__title {
+  @include font(17px, 24px, bold);
+}
+
+.production__text {
+  @include font(13px, 24px, normal, $greyish-brown);
+}
+
+.production__description {
+  padding-bottom: 33px;
+}
+
+.production__order {
+  width: 186px;
+}
