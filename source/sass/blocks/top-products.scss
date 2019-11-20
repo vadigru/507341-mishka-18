@@ -1,0 +1,37 @@
+.week-product {
+  @include font(15px, 24px, normal, $greyish-brown);
+  margin-bottom: 36px;
+}
+
+.week-product__title {
+  @include font(25px, 30px, bold);
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.week-product__subtitle {
+  @include font(17px, 20px, bold, $teal);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.week-product__text {
+  line-height: 24px;
+  margin-bottom: 27px;
+}
+
+.week-product__parameters {
+  line-height: 20px;
+  margin-bottom: 27px;
+}
+
+.week-product__image {
+  font-size: 0;
+  margin-bottom: 17px;
+}
+
+.week-product__price {
+  @include font(17px, 24px, bold, $greyish-brown);
+  text-align: center;
+  margin-bottom: 29px;
+}

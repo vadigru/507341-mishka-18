@@ -1,0 +1,13 @@
+@mixin font($size, $height, $weight: normal, $color: $black) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin hide-btn-text() {
+  text-indent: -9999px;
+  line-height: 0;
+  border: 0;
+  background-color: transparent;
+}

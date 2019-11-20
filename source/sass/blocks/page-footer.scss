@@ -1,0 +1,16 @@
+.social,
+.copyright {
+  background-color: $grey;
+}
+
+.social__btn {
+  font-size: 0;
+}
+
+.copyright__text {
+  @include font(19px, 18px, bold);
+}
+
+.copyright__link path {
+  fill: $teal;
+}
