@@ -28,7 +28,7 @@
   }
 
   &--flower::before {
-    content: url("../../img/icon-feature-flower.svg");
+    content: url("../img/icon-feature-flower.svg");
   }
 
   &--money {
@@ -36,7 +36,7 @@
   }
 
   &--money::before {
-    content: url("../../img/icon-feature-money.svg");
+    content: url("../img/icon-feature-money.svg");
   }
 
   &--heart {
@@ -44,7 +44,7 @@
   }
 
   &--heart::before {
-    content: url("../../img/icon-feature-heart.svg");
+    content: url("../img/icon-feature-heart.svg");
   }
 
   &--ball {
@@ -52,7 +52,7 @@
   }
 
   &--ball::before {
-    content: url("../../img/icon-feature-ball.svg");
+    content: url("../img/icon-feature-ball.svg");
   }
 
   &--rocket {
@@ -60,7 +60,7 @@
   }
 
   &--rocket::before {
-    content: url("./../img/icon-feature-rocket.svg");
+    content: url("../img/icon-feature-rocket.svg");
   }
 
   &--gift {
@@ -68,7 +68,7 @@
   }
 
   &--gift::before {
-    content: url("../../img/icon-feature-gift.svg");
+    content: url("../img/icon-feature-gift.svg");
   }
 }
 

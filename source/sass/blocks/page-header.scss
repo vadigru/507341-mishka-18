@@ -18,7 +18,7 @@
   font-size: 0;
   padding: 20px;
   content: "";
-  background-image: url("../../img/icon-menu-open.svg");
+  background-image: url("../img/icon-menu-open.svg");
   background-size: 20px 14px;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@
   left: 32px;
 
   &::after {
-    content: url("../../img/icon-search.svg");
+    content: url("../img/icon-search.svg");
     text-indent: 0;
     display: block;
     line-height: initial;
@@ -80,7 +80,7 @@
   margin-right: 30px;
 
   &::after {
-    content: url("../../img/icon-cart.svg");
+    content: url("../img/icon-cart.svg");
     text-indent: 0;
     display: block;
     line-height: initial;
