@@ -5,4 +5,87 @@
 
 .about__title {
   @include font(25px, 30px, bold);
+  margin: 0;
+  padding: 0;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+
+  &::before {
+    margin-bottom: 15px;
+  }
+
+  &--flower {
+    width: 190px;
+  }
+
+  &--flower::before {
+    content: url("../../img/icon-feature-flower.svg");
+  }
+
+  &--money {
+    width: 220px;
+  }
+
+  &--money::before {
+    content: url("../../img/icon-feature-money.svg");
+  }
+
+  &--heart {
+    width: 200px;
+  }
+
+  &--heart::before {
+    content: url("../../img/icon-feature-heart.svg");
+  }
+
+  &--ball {
+    width: 220px;
+  }
+
+  &--ball::before {
+    content: url("../../img/icon-feature-ball.svg");
+  }
+
+  &--rocket {
+    width: 250px;
+  }
+
+  &--rocket::before {
+    content: url("./../img/icon-feature-rocket.svg");
+  }
+
+  &--gift {
+    width: 220px;
+  }
+
+  &--gift::before {
+    content: url("../../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: 768px) {
+  .about__title {
+    @include font(43px, 50px, bold);
+  }
+
+  .about__list {
+    height: 400px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1150px) {
+  .about__list {
+    width: 600px;
+    padding-left: 200px;
+  }
 }

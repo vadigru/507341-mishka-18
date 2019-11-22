@@ -27,22 +27,16 @@ img {
 }
 
 .button {
+  @include font(17px, 20px, bold, $greyish-brown);
+  font-family: $font-primary;
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: $font-primary;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 20px;
-  color: $greyish-brown;
-  text-transform: uppercase;
-
   margin: 0;
   padding: 0;
-
-  width: 258px;
-  height: 49px;
-
+  width: 256px;
+  height: 48px;
   background-color: $white;
   border: 2px solid $greyish-brown;
 }
@@ -76,27 +70,30 @@ img {
   padding: 0;
 }
 
+.divider:first-of-type {
+  width: 319px;
+  height: 6px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  content: url("../img/bg-zigzag-line.svg");
+  transform: rotate(180deg) scaleX(1.07);
+}
+
 .wrapper {
   margin: 0 auto;
   width: 320px;
-
-  // временно для обводки
-  position: relative;
-  outline: 2px solid magenta;
-
-  &::before {
-    content: attr(class);
-    background-color: magenta;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 }
 
 @media (min-width: 768px) {
   body {
     min-width: 768px;
+  }
+
+  .divider:first-of-type {
+    width: 771px;
+    height: 15px;
+    margin-bottom: 50px;
+    transform: rotate(180deg) scaleX(1.03);
   }
 
   .wrapper {
@@ -109,10 +106,17 @@ img {
     min-width: 1050px;
   }
 
+  .divider:first-of-type {
+    width: 1050px;
+    height: 23px;
+    transform: rotate(180deg) scaleX(1);
+  }
+
   .wrapper {
     width: 1150px;
   }
 }
+
 // временная обводка крупных блоков
 header {
   position: relative;
@@ -131,19 +135,19 @@ header {
 }
 
 
-section {
-  position: relative;
-  outline: 2px solid indianred;
+// section {
+//   position: relative;
+//   outline: 2px solid indianred;
 
-  &::before {
-    content: attr(class);
-    background-color: indianred;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
+//   &::before {
+//     content: attr(class);
+//     background-color: indianred;
+//     color: white;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
+// }
 
 article {
   position: relative;
