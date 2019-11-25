@@ -23,6 +23,7 @@
 
 .week-product__description {
   margin: 0 auto;
+  width: 260px;
 }
 
 
@@ -76,7 +77,7 @@
 @media (min-width: 768px) {
   .top-products {
     @include font(17px, 30px, normal, $greyish-brown);
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 
   .week-product__block {
@@ -88,6 +89,7 @@
     @include font(43px, 50px, bold);
     margin-right: 145px;
     margin-bottom: 0;
+    padding-top: 1px;
     padding-left: 49px;
   }
 
@@ -97,11 +99,12 @@
     width: 70px;
     margin-bottom: 54px;
     padding: 0;
-    padding-top: 10px;
+    padding-top: 12px;
   }
 
   .week-product__description {
     width: 292px;
+    margin-left: 50px;
   }
 
   .week-product__text {
@@ -132,7 +135,7 @@
   }
 
   .week-product__image {
-    margin-bottom: -10px;
+    margin-bottom: -13px;
   }
 }
 

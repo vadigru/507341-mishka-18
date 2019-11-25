@@ -1,23 +1,75 @@
 .reviews {
   @include font(15px, 30px, normal, $greyish-brown);
   margin-bottom: 45px;
-  background-color: lemonchiffon;
+}
 
-  &__title {
-    @include font(25px, 30px, bold);
+.reviews__title {
+  @include font(25px, 30px, bold);
+  margin-bottom: 23px;
+}
+
+.slider {
+  width: 260px;
+}
+
+.slider__item {
+  margin-bottom: 29px;
+}
+
+.slider__text {
+  margin-bottom: 24px;
+}
+
+.slider__author-name {
+  @include font(17px, 24px, bold);
+  font-style: normal;
+}
+
+.slider__author-nickname {
+  font-weight: normal;
+}
+
+.slider__btns-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 38px;
+}
+
+.slider__btn {
+  @include hide-btn-text();
+  width: 130px;
+  height: 50px;
+  border: 1px solid $white-four;
+  background-color: transparent;
+  position: relative;
+
+  &::after {
+    width: 50px;
+    height: 26px;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+    position: absolute;
+    top: 13px;
+    right: 42px;
   }
 
-  &__item {
-    margin: 0;
-    padding: 0;
+  &--prev {
+    border-right: 0;
+
+    &::after {
+      content: url("../img/icon-left-arrow.svg");
+    }
   }
 
-  &__author-name {
-    @include font(17px, 24px, bold);
-    font-style: normal;
+  &--next {
+    &::after {
+      content: url("../img/icon-right-arrow.svg");
+    }
   }
+}
 
-  &__author-nickname {
-    font-weight: normal;
-  }
+.reviews__write {
+  margin: 0 auto;
+  letter-spacing: 0.5px;
 }

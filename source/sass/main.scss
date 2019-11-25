@@ -70,13 +70,24 @@ img {
   padding: 0;
 }
 
-.divider:first-of-type {
+.divider {
   width: 319px;
   height: 6px;
   margin: 0 auto;
+  content: "";
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 2px;
+  transform: rotate(180deg);
+}
+
+.divider:first-of-type {
   margin-bottom: 27px;
-  content: url("../img/bg-zigzag-line.svg");
-  transform: rotate(180deg) scaleX(1.07);
+}
+
+.divider:last-of-type {
+  margin-bottom: 35px;
 }
 
 .wrapper {
@@ -89,11 +100,12 @@ img {
     min-width: 768px;
   }
 
-  .divider:first-of-type {
+  .divider {
     width: 771px;
     height: 15px;
     margin-bottom: 50px;
-    transform: rotate(180deg) scaleX(1.03);
+    background-size: cover;
+    transform: rotate(180deg) scaleX(1.02);
   }
 
   .wrapper {
@@ -106,10 +118,11 @@ img {
     min-width: 1050px;
   }
 
-  .divider:first-of-type {
+  .divider {
     width: 1050px;
     height: 23px;
-    transform: rotate(180deg) scaleX(1);
+    background-size: contain;
+    transform: rotate(180deg);
   }
 
   .wrapper {

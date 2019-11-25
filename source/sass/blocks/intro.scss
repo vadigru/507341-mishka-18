@@ -1,6 +1,5 @@
 .intro {
-  min-width: 320px;
-  margin-bottom: 56px;
+  margin-bottom: 28px;
 }
 
 .intro__block {
@@ -8,7 +7,7 @@
   margin: 0 auto;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: -125px -23px;
+  background-position: -127px -19px;
   position: relative;
 }
 
@@ -16,7 +15,12 @@
   @include font(26.5px, 29.5px, bold);
   text-align: center;
   margin-bottom: 120px;
-  padding-top: 70px;
+  padding-top: 73px;
+  letter-spacing: 0.5px;
+}
+
+.categories__list {
+  padding-top: 2px;
 }
 
 .categories__item {
@@ -34,11 +38,38 @@
 
 .categories__link {
   @include font(19px, 24px, bold, $white);
-  background-color: $teal;
-  padding-top: 29px;
-  padding-bottom: 29px;
-  padding-left: 29px;
+  display: flex;
+  flex-direction: row;
   flex-grow: 1;
+  padding-top: 27px;
+  padding-bottom: 28px;
+  padding-left: 29px;
+  background-color: $teal;
+  position: relative;
+
+  &::after {
+    margin-left: auto;
+  }
+}
+
+.categories__item:first-of-type > .categories__link::after {
+  content: url("../../img/icon-interior.svg");
+  width: 40px;
+  height: 62px;
+  top: 24px;
+  right: 36px;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.categories__item:last-of-type > .categories__link::after {
+  content: url("../../img/icon-toy.svg");
+  width: 40px;
+  height: 62px;
+  position: absolute;
+  top: 22px;
+  right: 46px;
+  opacity: 0.5;
 }
 
 .categories__text {
@@ -75,7 +106,12 @@
     width: 600px;
     margin: 0 auto;
     margin-bottom: 373px;
-    padding-top: 152px;
+    padding-top: 154px;
+    letter-spacing: 0.2px;
+  }
+
+  .intro__title > br {
+    display: none;
   }
 
   .categories__list {
@@ -83,9 +119,11 @@
     flex-direction: row;
     width: 668px;
     margin: 0 auto;
+    padding-top: 0;
   }
 
   .categories__item {
+
     flex-grow: 1;
   }
 
@@ -94,6 +132,16 @@
     padding-top: 28px;
     padding-bottom: 30px;
     padding-left: 36px;
+  }
+
+  .categories__item:first-of-type > .categories__link::after {
+    top: 29px;
+    right: 36px;
+  }
+
+  .categories__item:last-of-type > .categories__link::after {
+    top: 31px;
+    right: 53px;
   }
 }
 
