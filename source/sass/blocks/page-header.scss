@@ -3,7 +3,7 @@
   z-index: 1000;
 }
 
-.page-header__logo {
+.page-header__top {
   display: flex;
   justify-content: center;
   position: relative;
@@ -96,7 +96,7 @@
     display: flex;
   }
 
-  .page-header__logo {
+  .page-header__top {
     padding-left: 50px;
     position: absolute;
   }
@@ -170,7 +170,7 @@
 }
 
 @media (min-width: 1150px) {
-  .page-header__logo {
+  .page-header__top {
     margin-left: 500px;
   }
 

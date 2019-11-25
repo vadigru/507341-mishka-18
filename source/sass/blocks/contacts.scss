@@ -5,6 +5,31 @@
 
 .contacts__title {
   @include font(18px, 30px, bold);
+  margin-bottom: 24px;
+  padding-left: 28px;
+}
+
+.contacts__type {
+  width: 75px;
+  padding-left: 28px;
+}
+
+.contacts__text {
+  width: 178px;
+}
+
+.contacts__email > .contacts__text {
+  border-bottom: 1px solid $teal;
+}
+
+.contacts__address > .contacts__type {
+  padding-top: 27px;
+  vertical-align: top;
+  line-height: 30px;
+}
+
+.contacts__address > .contacts__text {
+  padding-top: 27px;
 }
 
 .contacts__map {
