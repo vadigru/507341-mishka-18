@@ -5,33 +5,224 @@
 
 .contacts__title {
   @include font(18px, 30px, bold);
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   padding-left: 28px;
 }
 
-.contacts__type {
-  width: 75px;
-  padding-left: 28px;
+.contacts__data {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 39px;
 }
 
-.contacts__text {
-  width: 178px;
+.contacts__email {
+  margin-bottom: 30px;
 }
 
-.contacts__email > .contacts__text {
-  border-bottom: 1px solid $teal;
+.contacts__email > .contacts__type {
+  margin-right: 30px;
 }
 
 .contacts__address > .contacts__type {
-  padding-top: 27px;
-  vertical-align: top;
-  line-height: 30px;
+  margin-right: 31px;
 }
 
-.contacts__address > .contacts__text {
-  padding-top: 27px;
+.contacts__link {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 180px;
+    height: 1px;
+    position: absolute;
+    top: 25px;
+    left: 1px;
+    border-top: 1px solid $turquoise;
+  }
+}
+
+.contacts__email,
+.contacts__address {
+  display: flex;
 }
 
 .contacts__map {
-  margin-bottom: 29px;
+  position: relative;
+
+  &::before {
+    width: 67px;
+    height: 100px;
+    content: url("../img/icon-map-pin.svg");
+    position: absolute;
+    top: calc(50% - 85px);
+    left: calc(50% - 22px);
+  }
+}
+
+.contacts__map-image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+.contacts__write-btn {
+  width: 226px;
+  margin-right: auto;
+  margin-left: auto;
+  letter-spacing: 0.9px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    margin-bottom: 57px;
+  }
+
+  .contacts__title {
+    @include font(43px, 50px, bold);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 46px;
+    margin-bottom: 33px;
+  }
+
+  .contacts__title::after {
+    width: 47px;
+    height: 81px;
+    content: url("../img/icon-flag.svg");
+    padding-right: 55px;
+  }
+
+  .contacts__data {
+    @include font(17px, 30px, normal, $greyish-brown);
+    width: 771px;
+    flex-direction: row;
+    margin-bottom: 55px;
+  }
+
+  .contacts__email {
+    padding-left: 52px;
+    margin-right: 54px;
+  }
+
+  .contacts__type {
+    letter-spacing: -0.3px;
+  }
+
+  .contacts__email > .contacts__type {
+    margin-right: 24px;
+  }
+
+  .contacts__email > .contacts__link {
+    &::after {
+      top: 26px;
+      width: 200px;
+    }
+  }
+
+  .contacts__address > .contacts__type {
+    margin-right: 26px;
+  }
+
+  .contacts__map {
+    margin-bottom: 56px;
+
+    &::before {
+      top: calc(50% - 89px);
+      left: calc(50% - 20px);
+    }
+  }
+
+  .contacts__map-image {
+    width: 768px;
+    height: auto;
+  }
+
+  .contacts__write-btn {
+    text-align: center;
+    width: 198px;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    margin-bottom: 90px;
+  }
+
+  .contacts__block {
+    width: 1050px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .contacts__title {
+    @include font(53px, 57px, bold);
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 40px;
+    width: 51%;
+  }
+
+  .contacts__title::after {
+    padding-top: 3px;
+    padding-left: 63px;
+    margin-right: 3px;
+    order: -1;
+  }
+
+  .contacts__data {
+    width: 50%;
+    flex-direction: column;
+    padding-left: 175px;
+    margin: 0;
+    margin-bottom: 64px;
+  }
+
+  .contacts__email {
+    padding-left: 0;
+    margin-right: 0;
+  }
+
+  .contacts__link {
+    &::after {
+      width: 200px;
+      top: 27px;
+    }
+  }
+
+  .contacts__map {
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+    &::before {
+      top: calc(50% - 82px);
+      left: calc(50% - 24px);
+    }
+  }
+
+  .contacts__map-image {
+    width: 525px;
+    height: auto;
+    margin: 0;
+  }
+
+  .contacts__write {
+    width: 55%;
+  }
+
+  .contacts__write-btn {
+    width: 196px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
