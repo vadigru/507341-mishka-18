@@ -1,31 +1,41 @@
+.page-footer {
+  background-color: $grey;
+}
+
 .page-footer__block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: $grey;
+}
+
+.page-footer__logo {
+  display: none;
 }
 
 .social__list {
   display: flex;
-  align-items: center;
-  width: 144px;
-  padding-top: 30px;
-  margin-bottom: 30px;
+  width: 146px;
+  padding-top: 25px;
+  padding-bottom: 21px;
 }
 
 .social__btn {
   display: block;
   font-size: 0;
+  height: 30px;
+}
+
+.social__link--instagram {
+  padding-top: 6px;
+  margin-right: 41px;
 }
 
 .social__link--facebook {
-  padding-left: 40px;
-  margin-top: -2px;
+  margin-right: 40px;
 }
 
 .social__link--twitter {
-  padding-left: 40px;
+  padding-top: 6px;
 }
 
 .copyright {
@@ -33,12 +43,12 @@
   flex-direction: row;
   width: 260px;
   margin-bottom: 30px;
-  box-shadow: 0 -1px 0 0 $black;
+  box-shadow: 0 -1px 0 0 $white-four;
 }
 
 .copyright__text {
   @include font(19px, 18px, bold);
-  padding-top: 26px;
+  padding-top: 27px;
   padding-left: 38px;
   margin-right: 29px;
 }
@@ -48,26 +58,25 @@
 }
 
 .copyright__link path {
-  fill: $teal;
+  fill: $turquoise;
 }
 
-@media (min-width: 768px) {
-  .page-footer__block::before {
-    content: url("../img/logo-footer.svg");
-    padding-left: 52px;
-    margin-right: 160px;
+@media (min-width: $tablet-width) {
+  .page-footer__block {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 27px;
+    padding-bottom: 29px;
   }
 
-  .page-footer__block {
-    width: 772px;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-top: 27px;
-    padding-bottom: 25px;
+  .page-footer__logo {
+    display: block;
+    padding-left: 40px;
+    margin-right: 158px;
   }
 
   .social__list {
-    padding-top: 32px;
+    padding-top: 30px;
     margin-right: 40px;
   }
 
@@ -79,23 +88,27 @@
   .copyright__text {
     @include font(19px, 18px, bold);
     padding-top: 19px;
-    margin-right: 31px;
+    margin-right: 29px;
   }
 
   .copyright__link {
-    padding-top: 15px;
+    padding-top: 13px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $desktop-width) {
   .page-footer__block {
-    width: 1150px;
+    width: 1050px;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 25px;
+  }
+
+  .page-footer__logo {
+    padding-left: 0;
+    margin-right: 162px;
   }
 
   .copyright {
-    margin-right: 15px;
+    width: auto;
+    box-shadow: none;
   }
 }

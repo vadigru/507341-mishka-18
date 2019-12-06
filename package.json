@@ -5,9 +5,9 @@
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.5.x",
+    "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.7",
-    "gulp": "4.0.x",
+    "gulp": "^4.0.2",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
     "gulp-sass": "^4.0.2",
@@ -37,5 +37,10 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001012",
+    "editorconfig": "^0.15.3",
+    "editorconfig-cli": "^0.3.0"
   }
 }

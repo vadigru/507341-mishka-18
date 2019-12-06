@@ -2,14 +2,13 @@
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   font-family: $font-primary;
-  background-color: $white;
   min-width: 320px;
+  margin: 0;
+  background-color: $white;
 }
 
 a {
@@ -22,21 +21,16 @@ img {
   height: auto;
 }
 
-.block {
-  box-sizing: content-box;
-}
-
 .button {
-  @include font(17px, 20px, bold, $greyish-brown);
+  @include font(17px, 16px, bold, $greyish-brown);
   font-family: $font-primary;
+  text-align: center;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  width: 256px;
-  height: 48px;
+  display: block;
+  padding-top: 17px;
+  padding-right: 15px;
+  padding-bottom: 16px;
+  padding-left: 15px;
   background-color: $white;
   border: 2px solid $greyish-brown;
 }
@@ -71,23 +65,24 @@ img {
 }
 
 .divider {
-  width: 319px;
+  width: 320px;
   height: 6px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   content: "";
   background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: contain;
   background-position-x: 2px;
   transform: rotate(180deg);
 }
 
 .divider:first-of-type {
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 }
 
 .divider:last-of-type {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .wrapper {
@@ -108,8 +103,16 @@ img {
     transform: rotate(180deg) scaleX(1.02);
   }
 
+  .divider:first-of-type {
+    margin-bottom: 48px;
+  }
+
+  .divider:last-of-type {
+    margin-bottom: 47px;
+  }
+
   .wrapper {
-    width: 772px;
+    width: 771px;
   }
 }
 
@@ -120,73 +123,20 @@ img {
 
   .divider {
     width: 1050px;
-    height: 23px;
+    height: 21px;
     background-size: contain;
     transform: rotate(180deg);
   }
 
+  .divider:first-of-type {
+    margin-bottom: 60px;
+  }
+
+  .divider:last-of-type {
+    margin-bottom: 47px;
+  }
+
   .wrapper {
     width: 1150px;
-  }
-}
-
-// временная обводка крупных блоков
-header {
-  position: relative;
-  outline: 2px solid mediumseagreen;
-
-  &::before {
-    content: attr(class);
-    width: auto;
-    height: auto;
-    background-color: mediumseagreen;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-
-// section {
-//   position: relative;
-//   outline: 2px solid indianred;
-
-//   &::before {
-//     content: attr(class);
-//     background-color: indianred;
-//     color: white;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//   }
-// }
-
-article {
-  position: relative;
-  box-shadow: inset 0 0 0 2px skyblue;
-
-
-  &::before {
-    content: attr(class);
-    background-color: skyblue;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-footer {
-  position: relative;
-  outline: 2px solid indigo;
-
-  &::before {
-    content: attr(class);
-    background-color: indigo;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
