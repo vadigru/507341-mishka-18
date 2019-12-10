@@ -44,9 +44,9 @@
 .week-product__color,
 .week-product__diameter,
 .week-product__height {
-  height: 40px;
   display: flex;
-  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 12px;
   box-shadow: 0 1px 0 0 $white-four;
 }
 

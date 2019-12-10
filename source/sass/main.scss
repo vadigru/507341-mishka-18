@@ -21,18 +21,14 @@ img {
   height: auto;
 }
 
-.button {
-  @include font(17px, 16px, bold, $greyish-brown);
-  font-family: $font-primary;
-  text-align: center;
-  text-transform: uppercase;
-  display: block;
-  padding-top: 17px;
-  padding-right: 15px;
-  padding-bottom: 16px;
-  padding-left: 15px;
-  background-color: $white;
-  border: 2px solid $greyish-brown;
+@mixin svg-ie-fix {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .visually-hidden {
@@ -64,79 +60,14 @@ img {
   padding: 0;
 }
 
-.divider {
-  width: 320px;
-  height: 6px;
-  margin-right: auto;
-  margin-left: auto;
-  content: "";
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat;
-  background-size: contain;
-  background-position-x: 2px;
-  transform: rotate(180deg);
-}
-
-.divider:first-of-type {
-  margin-bottom: 26px;
-}
-
-.divider:last-of-type {
-  margin-bottom: 34px;
-}
-
-.wrapper {
-  margin: 0 auto;
-  width: 320px;
-}
-
 @media (min-width: 768px) {
   body {
     min-width: 768px;
-  }
-
-  .divider {
-    width: 771px;
-    height: 15px;
-    margin-bottom: 50px;
-    background-size: cover;
-    transform: rotate(180deg) scaleX(1.02);
-  }
-
-  .divider:first-of-type {
-    margin-bottom: 48px;
-  }
-
-  .divider:last-of-type {
-    margin-bottom: 47px;
-  }
-
-  .wrapper {
-    width: 771px;
   }
 }
 
 @media (min-width: 1150px) {
   body {
-    min-width: 1050px;
-  }
-
-  .divider {
-    width: 1050px;
-    height: 21px;
-    background-size: contain;
-    transform: rotate(180deg);
-  }
-
-  .divider:first-of-type {
-    margin-bottom: 60px;
-  }
-
-  .divider:last-of-type {
-    margin-bottom: 47px;
-  }
-
-  .wrapper {
-    width: 1150px;
+    min-width: 1150px;
   }
 }
