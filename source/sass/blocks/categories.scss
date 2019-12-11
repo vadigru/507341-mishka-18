@@ -1,0 +1,109 @@
+.categories__list {
+  padding-top: 2px;
+}
+
+.categories__item {
+  background-color: $turquoise;
+  display: flex;
+}
+
+.categories__item:last-of-type {
+  background-color: $turquoise-darken;
+}
+
+.categories__link {
+  @include font(19px, 24px, bold, $white);
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  padding-top: 27px;
+  padding-bottom: 28px;
+  padding-left: 29px;
+  background-color: $turquoise;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &::after {
+    width: 40px;
+    height: 62px;
+    position: absolute;
+    opacity: 0.5;
+    margin-left: auto;
+  }
+}
+
+.categories__item:last-of-type > .categories__link {
+  background-color: $turquoise-darken;
+}
+
+.categories__item:first-of-type > .categories__link::after {
+  content: url("../img/icon-interior.svg");
+  top: 24px;
+  right: 36px;
+}
+
+.categories__item:last-of-type > .categories__link::after {
+  content: url("../img/icon-toy.svg");
+  top: 22px;
+  right: 46px;
+}
+
+.categories__item:hover > .categories__link::after,
+.categories__item:focus > .categories__link::after {
+  opacity: 0.7;
+}
+
+.categories__item:active > .categories__link .categories__text,
+.categories__item > .categories__link:active .categories__text {
+  color: rgba($white, 0.3);
+}
+
+.categories__item:active > .categories__link::after,
+.categories__item > .categories__link:active::after {
+  opacity: 0.3;
+}
+
+.categories__text {
+  width: 106px;
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .categories__list {
+    display: flex;
+    flex-direction: row;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+
+  .categories__item {
+    flex-grow: 1;
+  }
+
+  .categories__link {
+    @include font(20px, 30px, bold, $white);
+    padding-top: 28px;
+    padding-bottom: 30px;
+    padding-left: 36px;
+  }
+
+  .categories__item:first-of-type > .categories__link::after {
+    top: 29px;
+    right: 36px;
+  }
+
+  .categories__item:last-of-type > .categories__link::after {
+    top: 31px;
+    right: 53px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories__list {
+    width: 1050px;
+  }
+}

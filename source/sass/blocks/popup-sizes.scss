@@ -1,0 +1,48 @@
+.sizes {
+  width: 260px;
+  display: flex;
+  font-display: row;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sizes__item {
+  @include font(17px, 16px, bold, $greyish-brown);
+}
+
+.sizes__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 76px;
+  height: 46px;
+  border: 2px solid rgba($greyish-brown, 0.1);
+
+  &:hover {
+    border: 2px solid rgba($greyish-brown, 0.3);
+  }
+
+  &:active {
+    border: 2px solid $turquoise-hover;
+  }
+}
+
+.sizes__input:focus + .sizes__label {
+  border: 2px solid rgba($greyish-brown, 0.3);
+}
+
+.sizes__input:checked + .sizes__label {
+  border: 2px solid $turquoise-hover;
+}
+
+
+@media (min-width: $tablet-width) {
+  .sizes {
+    width: 350px;
+  }
+
+  .sizes__label {
+    width: 108px;
+  }
+}

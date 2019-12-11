@@ -1,0 +1,46 @@
+.social__list {
+  display: flex;
+  width: 146px;
+  padding-top: 25px;
+  padding-bottom: 21px;
+}
+
+.social__btn {
+  display: block;
+  font-size: 0;
+  height: 30px;
+  position: relative;
+
+  &::before {
+    @include svg-ie-fix;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $turquoise-lite;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__link--instagram {
+  padding-top: 6px;
+  margin-right: 41px;
+}
+
+.social__link--facebook {
+  margin-right: 40px;
+}
+
+.social__link--twitter {
+  padding-top: 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    padding-top: 30px;
+    margin-right: 40px;
+  }
+}
