@@ -1,6 +1,6 @@
 .contacts {
   @include font(15px, 30px, normal, $greyish-brown);
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 }
 
 .contacts__title {
@@ -67,6 +67,13 @@
 }
 
 .contacts__map {
+  min-width: 320px;
+  height: 457px;
+  margin-bottom: 38px;
+}
+
+.contacts__map-container {
+  display: block;
   position: relative;
 
   &::before {
@@ -77,13 +84,18 @@
     top: calc(50% - 85px);
     left: calc(50% - 22px);
   }
+
+  &--hide {
+    display: none;
+  }
 }
 
 .contacts__map-image {
   display: block;
+  width: 100%;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 40px;
 }
 
 .contacts__write-btn {
@@ -148,7 +160,9 @@
 
   .contacts__map {
     margin-bottom: 56px;
+  }
 
+  .contacts__map-container {
     &::before {
       top: calc(50% - 89px);
       left: calc(50% - 20px);
@@ -209,11 +223,13 @@
   }
 
   .contacts__map {
-    height: auto;
-    position: absolute;
+    width: 525px;
     top: 10px;
     right: 0;
+    position: absolute;
+  }
 
+  .contacts__map-container {
     &::before {
       top: calc(50% - 82px);
       left: calc(50% - 24px);

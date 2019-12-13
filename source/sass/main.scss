@@ -60,13 +60,13 @@ img {
   padding: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   body {
     min-width: 768px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $desktop-width) {
   body {
     min-width: 1150px;
   }

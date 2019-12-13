@@ -22,21 +22,19 @@
   }
 
   .page-footer__logo {
-    display: inline-block;
-    margin-right: 123px;
+    display: block;
+    margin-right: 160px;
   }
 
   .page-footer__logo-link {
     position: relative;
 
-    display: inline-block;
-
     &::before {
       @include svg-ie-fix;
     }
 
-    &[href]:hover path,
-    &[href]:focus path {
+    &[href]:hover,
+    &[href]:focus {
       fill: $turquoise-lite;
     }
 
@@ -54,6 +52,6 @@
 
   .page-footer__logo {
     padding-left: 0;
-    margin-right: 123px;
+    margin-right: 82px;
   }
 }

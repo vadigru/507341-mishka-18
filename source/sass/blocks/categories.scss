@@ -5,10 +5,31 @@
 .categories__item {
   background-color: $turquoise;
   display: flex;
-}
 
-.categories__item:last-of-type {
-  background-color: $turquoise-darken;
+  &:last-of-type {
+    background-color: $turquoise-darken;
+  }
+
+  &:last-of-type > .categories__link {
+    background-color: $turquoise-darken;
+  }
+
+  &:hover > .categories__link .categories__icon-interior,
+  &:focus > .categories__link .categories__icon-interior,
+  &:hover > .categories__link .categories__icon-toy,
+  &:focus > .categories__link .categories__icon-toy {
+    fill: rgba($blue-green, 0.7);
+  }
+
+  &:active > .categories__link .categories__text,
+  &:active > .categories__link .categories__icon-interior,
+  &:active > .categories__link .categories__icon-toy,
+  & > .categories__link:active .categories__text,
+  & > .categories__link:active .categories__icon-interior,
+  & > .categories__link:active .categories__icon-toy {
+    color: rgba($white, 0.3);
+    fill: rgba($blue-green, 0.3);
+  }
 }
 
 .categories__link {
@@ -25,45 +46,20 @@
   &:hover {
     transform: translateY(-5px);
   }
-
-  &::after {
-    width: 40px;
-    height: 62px;
-    position: absolute;
-    opacity: 0.5;
-    margin-left: auto;
-  }
 }
 
-.categories__item:last-of-type > .categories__link {
-  background-color: $turquoise-darken;
-}
-
-.categories__item:first-of-type > .categories__link::after {
-  content: url("../img/icon-interior.svg");
+.categories__icon-interior {
+  position: absolute;
   top: 24px;
   right: 36px;
+  fill: rgba($blue-green, 0.5);
 }
 
-.categories__item:last-of-type > .categories__link::after {
-  content: url("../img/icon-toy.svg");
+.categories__icon-toy {
+  position: absolute;
   top: 22px;
-  right: 46px;
-}
-
-.categories__item:hover > .categories__link::after,
-.categories__item:focus > .categories__link::after {
-  opacity: 0.7;
-}
-
-.categories__item:active > .categories__link .categories__text,
-.categories__item > .categories__link:active .categories__text {
-  color: rgba($white, 0.3);
-}
-
-.categories__item:active > .categories__link::after,
-.categories__item > .categories__link:active::after {
-  opacity: 0.3;
+  right: 26px;
+  fill: rgba($blue-green, 0.5);
 }
 
 .categories__text {
@@ -82,6 +78,16 @@
 
   .categories__item {
     flex-grow: 1;
+
+    &:first-of-type > .categories__link::after {
+      top: 29px;
+      right: 36px;
+    }
+
+    &:last-of-type > .categories__link::after {
+      top: 31px;
+      right: 53px;
+    }
   }
 
   .categories__link {
@@ -89,16 +95,6 @@
     padding-top: 28px;
     padding-bottom: 30px;
     padding-left: 36px;
-  }
-
-  .categories__item:first-of-type > .categories__link::after {
-    top: 29px;
-    right: 36px;
-  }
-
-  .categories__item:last-of-type > .categories__link::after {
-    top: 31px;
-    right: 53px;
   }
 }
 

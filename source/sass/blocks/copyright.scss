@@ -1,5 +1,5 @@
 .copyright {
-  width: 184px;
+  width: 260px;
   margin-bottom: 30px;
   box-shadow: 0 -1px 0 0 $white-four;
 }
@@ -12,9 +12,6 @@
 
 .copyright__icon {
   padding-top: 4px;
-}
-
-.copyright__icon path {
   fill: $turquoise;
 }
 
@@ -22,16 +19,17 @@
   padding-top: 17px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  padding-left: 38px;
+  padding-right: 39px;
   position: relative;
 
   &::before {
     @include svg-ie-fix;
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover svg,
+  &:focus svg {
     fill: $turquoise-darken;
   }
 
@@ -51,12 +49,18 @@
   }
 
   .copyright__link {
-    padding-top: 5px;
+    padding: 0;
+    padding-top: 4px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .copyright {
+    width: auto;
     box-shadow: none;
+  }
+
+  .copyright__text {
+    width: 158px;
   }
 }

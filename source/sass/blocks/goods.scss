@@ -86,17 +86,17 @@
   right: -7px;
   cursor: pointer;
 
-  &:hover path,
-  &:focus path {
+  &:hover .goods__cart-icon,
+  &:focus .goods__cart-icon {
     fill: $turquoise;
   }
 
-  &:active path {
+  &:active .goods__cart-icon {
     fill: rgba($turquoise, 0.3);
   }
 }
 
-.goods__cart path {
+.goods__cart-icon {
   fill: rgba($black, 0.2);
 }
 

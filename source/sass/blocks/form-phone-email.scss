@@ -60,9 +60,9 @@
     box-shadow: 0 2px 0 0 $turquoise-hover;
   }
 
-  &:hover path,
-  &:focus path,
-  &:active path {
+  &:hover svg,
+  &:focus svg,
+  &:active svg {
     fill: $turquoise-hover;
   }
 }
