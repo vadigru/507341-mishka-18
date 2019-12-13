@@ -10,6 +10,7 @@
 .production__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &:hover,
   &:focus {
@@ -19,22 +20,23 @@
 
 .production__title {
   @include font(17px, 24px, bold);
+  width: 190px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 7px;
-  padding-left: 90px;
   margin-bottom: 22px;
-  position: relative;
+}
 
-  &::before {
-    width: 32px;
-    height: 22px;
-    content: url("../img/icon-video.svg");
-    position: absolute;
-    top: 12px;
-    left: 35px;
-  }
+.production__icon-video {
+  width: 34px;
+  padding-top: 12px;
+  margin-right: 25px;
+  fill: $turquoise;
+  box-sizing: content-box;
+}
+
+.production__title-name {
+  display: block;
+  width: 150px;
+  padding-top: 7px;
 }
 
 .production__video {
@@ -95,25 +97,27 @@
 
   .production__title {
     @include font(20px, 24px, bold);
+    width: auto;
     align-items: center;
     align-self: flex-start;
-    padding-top: 2px;
+    padding: 0;
     padding-left: 40px;
-    margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 12px;
+  }
 
-    &::before {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: static;
-      padding-left: 0;
-      margin-right: 34px;
-    }
+  .production__icon-video {
+    padding-top: 0;
+    margin-right: 32px;
+    fill: $turquoise;
+  }
+
+  .production__title-name {
+    display: block;
+    width: auto;
+    padding-top: 0;
   }
 
   .production__video {
-    margin-bottom: 31px;
     order: -1;
   }
 
@@ -152,15 +156,22 @@
     width: 236px;
     display: block;
     align-self: flex-end;
-    padding-top: 49px;
+    padding-top: 22px;
+    padding-left: 0;
     margin-right: 53px;
-    margin-bottom: 33px;
+  }
 
-    &::before {
-      padding-left: 0;
-      margin-right: 0;
-      margin-bottom: 24px;
-    }
+  .production__icon-video {
+    padding-top: 0;
+    margin-bottom: 16px;
+    fill: $turquoise;
+  }
+
+  .production__title-name {
+    display: block;
+    width: auto;
+    padding-top: 0;
+    margin-bottom: 21px;
   }
 
   .production__description {

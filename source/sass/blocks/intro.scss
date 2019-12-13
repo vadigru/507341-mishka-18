@@ -5,7 +5,8 @@
 }
 
 .intro__block {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: -127px -19px;
@@ -41,7 +42,7 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-size: contain;
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
     }
   }
 
@@ -78,9 +79,9 @@
     margin-bottom: 70px;
 
     &::after {
+      width: 100%;
       height: 34px;
-      bottom: -17px;
-      transform: scaleX(1.09);
+      bottom: -16px;
     }
   }
 
