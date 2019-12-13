@@ -113,7 +113,7 @@ if (contacts) {
       hintContent: 'Интернет магазин «Мишка»'
   }, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icon-map-pin.svg',
+      iconImageHref: 'img/icon-map-pin.svg',
       iconImageSize: [66, 101],
       iconImageOffset: [-35, -85]
   })
