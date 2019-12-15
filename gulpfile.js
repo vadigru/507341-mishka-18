@@ -24,6 +24,7 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff, woff2}",
+    "source/js/**/*.min.js",
     "source/*.ico",
   ], {
     base: "source"
@@ -73,16 +74,10 @@ gulp.task("sprite", function () {
 });
 
 gulp.task("jscompress", function () {
-  return gulp.src("source/**/*.js")
+  return gulp.src("source/**/script.js")
     .pipe(uglify())
-    .pipe(rename(function (path) {
-      return {
-        dirname: path.dirname + "/",
-        basename: path.basename + ".min",
-        extname: ".js"
-      };
-    }))
-    .pipe(gulp.dest("build"));
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("html", function () {
