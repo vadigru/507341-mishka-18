@@ -8,11 +8,11 @@
   display: block;
 }
 
-.btn-nojs {
+.menu-btn--nojs {
   display: none;
 }
 
-.menu-nojs {
+.menu--nojs {
   display: block;
 }
 
@@ -57,19 +57,19 @@
 
   &[href]:hover,
   &[href]:focus {
-    opacity: 0.6;
+    color: rgba($black, 0.6);
   }
 
   &[href]:active {
-    opacity: 0.3;
+    color: rgba($black, 0.3);
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover svg,
+  &:focus svg {
     fill: $turquoise;
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba($turquoise, 0.3);
   }
 }
@@ -77,15 +77,13 @@
 .menu__icon {
   &--search {
     margin-right: 25px;
+    fill: rgba($black, 0.2);
   }
 
   &--cart {
     margin-right: 25px;
+    fill: rgba($black, 0.2);
   }
-}
-
-.menu__link path {
-  fill: rgba($black, 0.2);
 }
 
 @media (min-width: $tablet-width) {

@@ -1,8 +1,6 @@
-"use strict";
-
 (function () {
 var menu = document.querySelector(".menu");
-var menuToggle = document.querySelector(".page-header__menu-toggle");
+var menuToggle = document.querySelector(".menu-btn");
 var weekProduct = document.querySelector(".top-products");
 var goods = document.querySelector(".catalog");
 var modal = document.querySelector(".popup");
@@ -11,11 +9,11 @@ var ESC_KEYCODE = 27;
 
 // menu toggle ----------------------------------------------------------------
 
-menuToggle.classList.remove("btn-nojs");
-menu.classList.remove("menu-nojs");
+menuToggle.classList.remove("menu-btn--nojs");
+menu.classList.remove("menu--nojs");
 
 var menuClose = function() {
-  menuToggle.classList.remove("page-header__menu-toggle--open");
+  menuToggle.classList.remove("menu-btn--open");
   menu.classList.remove("menu--open");
   document.removeEventListener("keydown", onEscMenuClose);
 };
@@ -27,12 +25,12 @@ var onEscMenuClose = function(evt) {
 };
 
 var onClickToggle = function () {
-  if (!menuToggle.classList.contains("page-header__menu-toggle--open")) {
-    menuToggle.classList.add("page-header__menu-toggle--open");
+  if (!menuToggle.classList.contains("menu-btn--open")) {
+    menuToggle.classList.add("menu-btn--open");
     menu.classList.add("menu--open");
     document.addEventListener("keydown", onEscMenuClose);
   } else {
-    menuToggle.classList.remove("page-header__menu-toggle--open");
+    menuToggle.classList.remove("menu-btn--open");
     menu.classList.remove("menu--open");
   }
 };
@@ -99,26 +97,25 @@ var contacts = document.querySelector('.contacts');
 if (contacts) {
   var mapPic= document.querySelector('.contacts__map-container');
 
-  ymaps.ready(init);
-
-  function init () {
+  var init = function () {
     mapPic.classList.add('contacts__map-container--hide');
-
     var myMap = new ymaps.Map('map', {
       center: [59.938680, 30.322992],
       zoom: 16
-  }),
+    }),
 
-  myPlacemark = new ymaps.Placemark([59.938680, 30.322992], {
-      hintContent: 'Интернет магазин «Мишка»'
-  }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/icon-map-pin.svg',
-      iconImageSize: [66, 101],
-      iconImageOffset: [-35, -85]
-  })
+    myPlacemark = new ymaps.Placemark([59.938680, 30.322992], {
+        hintContent: 'Интернет магазин «Мишка»'
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/icon-map-pin.svg',
+        iconImageSize: [66, 101],
+        iconImageOffset: [-35, -85]
+    })
 
-  myMap.geoObjects.add(myPlacemark);
+    myMap.geoObjects.add(myPlacemark);
   };
+
+  ymaps.ready(init);
 }
 })();
