@@ -52,7 +52,7 @@
   content: "";
   width: 22px;
   height: 16px;
-  background-image: url("../../img/icon-tick.svg");
+  background-image: url("../img/icon-tick.svg");
   background-size: cover;
   position: absolute;
   top: 12px;
@@ -104,12 +104,12 @@
     align-items: center;
     padding-top: 0;
     padding-left: 80px;
-  }
 
-  .color__label::before {
-    content: "";
-    width: 50px;
-    height: 48px;
+    &::before {
+      content: "";
+      width: 50px;
+      height: 48px;
+    }
   }
 
   .color__input:checked + .color__label::after {
