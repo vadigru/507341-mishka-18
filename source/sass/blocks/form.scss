@@ -51,7 +51,7 @@
 
 @media (min-width: $tablet-width) {
   .order-form {
-    margin-top: -42px;
+    margin-top: -70px;
     margin-bottom: 49px;
   }
 
@@ -97,10 +97,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .order-form {
-    margin-top: -70px;
-  }
-
   .order-form__title {
     @include font(53px, 57px, bold);
     padding-top: 93px;

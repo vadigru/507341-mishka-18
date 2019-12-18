@@ -1,7 +1,7 @@
 .order-form__footnote {
-  display: block;
   letter-spacing: 0.4px;
   width: 260px;
+  display: block;
   margin-right: auto;
   margin-bottom: 30px;
   margin-left: auto;
@@ -37,7 +37,6 @@
 
   .order-form__send-btn {
     @include font(17px, 16px, bold);
-    width: 226px;
     padding-right: 0;
     padding-left: 0;
     margin: 0;
@@ -47,11 +46,6 @@
 @media (min-width: $desktop-width) {
   .order-form__bottom {
     width: 700px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: auto;
-    margin-left: auto;
   }
 
   .order-form__footnote {

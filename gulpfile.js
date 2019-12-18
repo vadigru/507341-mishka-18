@@ -16,6 +16,7 @@ var include = require("posthtml-include");
 var server = require("browser-sync").create();
 var del = require("del");
 var uglify = require("gulp-uglify");
+var htmlmin = require("gulp-htmlmin");
 
 gulp.task("clean", function () {
   return del("build");
@@ -23,7 +24,7 @@ gulp.task("clean", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff, woff2}",
+    "source/fonts/**/*.{woff,woff2}",
     "source/js/**/*.min.js",
     "source/*.ico",
   ], {
@@ -85,10 +86,11 @@ gulp.task("html", function () {
   .pipe(posthtml([
     include()
   ]))
+  .pipe(htmlmin({
+    collapseWhitespace: true
+  }))
   .pipe(gulp.dest("build"));
 });
-
-
 
 gulp.task("server", function () {
   server.init({

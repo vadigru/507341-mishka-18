@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Интернет магазин "Мишка"</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <script>
-    document.createElement( "picture" );
-  </script>
-  <script src="js/picturefill.min.js" async=""></script>
 </head>
 
 <body>
@@ -44,7 +42,7 @@
           </li>
 
           <li class="menu__item menu__item--search">
-            <a class="menu__link menu__link--hide" href="">
+            <a class="menu__link menu__link--hide" href="" aria-label="Поиск по сайту">
                 <svg class="menu__icon menu__icon--search" width="17px" height="17px">
                   <use xlink:href="#icon-search"></use>
                 </svg>
@@ -80,24 +78,18 @@
   <main class="page-main">
     <section class="intro">
       <div class="wrapper intro__block">
-        <h1 class="intro__title">Милые штуки<br> ручной<br> работы для дома</h1>
+        <h1 class="intro__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
         <div class="intro__menu categories">
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="list-no-style categories__list">
             <li class="categories__item">
               <a class="categories__link" href="">
                 <span class="categories__text">Предметы интерьера</span>
-                <svg class="categories__icon-interior" width="40px" height="62px">
-                  <use xlink:href="#icon-interior"></use>
-                </svg>
               </a>
             </li>
             <li class="categories__item">
               <a class="categories__link" href="">
                 <span class="categories__text">Детские игрушки</span>
-                <svg class="categories__icon-toy" width="60px" height="60px">
-                  <use xlink:href="#icon-toy"></use>
-                </svg>
               </a>
             </li>
           </ul>
@@ -133,7 +125,7 @@
 
             <div class="week-product__order-block">
               <p class="week-product__price">Цена: 990 руб.</p>
-              <button class="button week-product__order-btn" type="button">Заказать</button>
+              <a class="button week-product__order-btn" href="" aria-label="Заказать товар недели">Заказать</a>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
@@ -214,7 +206,7 @@
           </div>
 
           <p class="reviews__write">
-            <a class="button reviews__write-btn" href="">Написать</a>
+            <a class="button reviews__write-btn" href="" aria-label="Написать отзыв">Написать</a>
           </p>
         </div>
       </div>
@@ -228,7 +220,7 @@
         <ul class="list-no-style contacts__data">
           <li class="contacts__email">
             <span class="contacts__type">e-mail:</span>
-            <span class="contacts__text"><a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
+            <span class="contacts__text"><a class="contacts__link" href="mailto:info@mimimishkashop.ru" aria-label="Почта для контакта info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
           </li>
           <li class="contacts__address">
             <span class="contacts__type">адрес:</span>
@@ -294,7 +286,7 @@
       </div>
 
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработано в htmlacademy">
           <b class="copyright__text">Разработано</b>
           <svg class="copyright__icon" width="26px" height="34px">
             <use xlink:href="#logo-htmlacademy"></use>
@@ -326,12 +318,15 @@
             </li>
           </ul>
         </div>
-        <button class="button popup__btn-add" type="submit">Добавить</button>
+        <button class="button popup__btn-add" type="submit" aria-label="Добавить товар в корзину">Добавить</button>
       </form>
     </div>
   </section>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=7b33cf25-e2cf-4b93-9e71-83b834bb8f77&lang=ru_RU"></script>
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js"></script>
   <script src="js/script.min.js"></script>
 
 </body>
