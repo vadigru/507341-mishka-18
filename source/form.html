@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Интернет магазин "Мишка": Вязание на заказ</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <script>
-    document.createElement( "picture" );
-  </script>
-  <script src="js/picturefill.min.js" async=""></script>
 </head>
 
 <body>
@@ -40,7 +38,7 @@
             <a class="menu__link">Вязание на заказ</a>
           </li>
           <li class="menu__item menu__item--search">
-              <a class="menu__link menu__link--hide" href="">
+              <a class="menu__link menu__link--hide" href="" aria-label="Поиск по сайту">
                 <svg class="menu__icon menu__icon--search" width="17px" height="17px">
                   <use xlink:href="#icon-search"></use>
                 </svg>
@@ -96,27 +94,27 @@
               <div class="legend order-form__heading">Цвет</div>
               <ul class="list-no-style order-form__list color">
                 <li class="color__item">
-                  <input class="visually-hidden color__input color__input--checkbox" id="white" type="checkbox" name="color" value="white" checked="">
+                  <input class="visually-hidden color__input color__input--checkbox" id="white" type="checkbox" name="color" value="white" checked="" aria-label="Белый цвет">
                   <label class="color__label color__label--checkbox" for="white">Белый</label>
                 </li>
                 <li class="color__item">
-                  <input class="visually-hidden color__input color__input--checkbox" id="grey" type="checkbox" name="color" value="grey" checked="">
+                  <input class="visually-hidden color__input color__input--checkbox" id="grey" type="checkbox" name="color" value="grey" checked="" aria-label="Серый цвет">
                   <label class="color__label color__label--checkbox" for="grey">Серый</label>
                 </li>
                 <li class="color__item">
-                  <input class="visually-hidden color__input color__input--checkbox" id="tiffany" type="checkbox" name="color" value="tiffany">
+                  <input class="visually-hidden color__input color__input--checkbox" id="tiffany" type="checkbox" name="color" value="tiffany" aria-label="Цвет тиффани">
                   <label class="color__label color__label--checkbox" for="tiffany">&#171;Тиффани&#187;</label>
                 </li>
                 <li class="color__item">
-                  <input class="visually-hidden color__input color__input--checkbox" id="black" type="checkbox" name="color" value="black">
+                  <input class="visually-hidden color__input color__input--checkbox" id="black" type="checkbox" name="color" value="black" aria-label="Черный цвет">
                   <label class="color__label color__label--checkbox" for="black">Черный</label>
                 </li>
                 <li class="color__item">
-                  <input class="visually-hidden color__input color__input--checkbox" id="pink" type="checkbox" name="color" value="pink">
+                  <input class="visually-hidden color__input color__input--checkbox" id="pink" type="checkbox" name="color" value="pink" aria-label="Розовый цвет">
                   <label class="color__label color__label--checkbox" for="pink">Розовый</label>
                 </li>
                 <li class="color__item">
-                  <input class="visually-hidden color__input color__input--checkbox" id="orange" type="checkbox" name="color" value="orange">
+                  <input class="visually-hidden color__input color__input--checkbox" id="orange" type="checkbox" name="color" value="orange" aria-label="Оранжевый цвет">
                   <label class="color__label color__label--checkbox" for="orange">Оранжевый</label>
                 </li>
               </ul>
@@ -127,16 +125,16 @@
             <div class="legend order-form__heading">ФИО</div>
             <ul class="list-no-style order-form__list name">
               <li class="name__item">
-                <label class="name__label name__label--text" for="name">Имя:</label>
-                <input class="name__input name__input--text" id="name" type="text" name="name" placeholder="Введите ваше имя*">
+                <label class="name__label name__label--text" for="name" aria-label="Ваше имя">Имя:</label>
+                <input class="name__input name__input--text" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
               </li>
               <li class="name__item">
-                <label class="name__label name__label--text" for="surname">Фамилия:</label>
-                <input class="name__input name__input--text" id="surname" type="text" name="surname" placeholder="Укажите фамилию*">
+                <label class="name__label name__label--text" for="surname" aria-label="Ваша фамилия">Фамилия:</label>
+                <input class="name__input name__input--text" id="surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
               </li>
               <li class="name__item">
-                <label class="name__label name__label--text" for="fathername">Отчество:</label>
-                <input class="name__input name__input--text" id="fathername" type="text" name="fathername" placeholder="Отчество, если желаете*">
+                <label class="name__label name__label--text" for="fathersname" aria-label="Ваше отчество">Отчество:</label>
+                <input class="name__input name__input--text" id="fathersname" type="text" name="fathersname" placeholder="Отчество, если желаете*" required>
               </li>
             </ul>
           </div>
@@ -146,12 +144,12 @@
             <div class="legend order-form__heading">ТЕЛ</div>
             <ul class="list-no-style order-form__list phone">
               <li class="phone__item">
-                <input class="phone__input phone__input--phone" id="phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-                  <label class="phone__label" for="phone">
-                    <svg class="phone__icon" width="24px" height="24px">
-                      <use xlink:href="#icon-phone"></use>
-                    </svg>
-                  </label>
+                <input class="phone__input phone__input--phone" id="phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <label class="phone__label hide-text" for="phone">Укажите ваш номер телефона
+                  <svg class="phone__icon" width="24px" height="24px">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </label>
               </li>
             </ul>
           </div>
@@ -163,11 +161,11 @@
             <ul class="list-no-style order-form__list email">
               <li class="email__item">
                 <input class="email__input email__input--text" id="email" type="email" name="email" placeholder="Ваш Email*">
-                  <label class="email__label" for="email">
-                    <svg class="email__icon" width="32px" height="32px">
-                      <use xlink:href="#icon-mail"></use>
-                    </svg>
-                  </label>
+                <label class="email__label hide-text" for="email">Укажите вашу почту
+                  <svg class="email__icon" width="32px" height="32px">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </label>
               </li>
             </ul>
           </div>
@@ -177,7 +175,8 @@
             <div class="legend order-form__heading">ДОП</div>
             <ul class="list-no-style order-form__list additional-info">
               <li class="additional-info__item">
-                <textarea class="additional-info__text" rows="8" cols="20" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <label class="visually-hidden" for="info">Дополнительная информация - Опишите все ваши пожелания к заказу</label>
+                <textarea class="additional-info__text" id="info" rows="8" cols="20" name="additional info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </li>
             </ul>
           </div>
@@ -197,7 +196,7 @@
   <footer class="page-footer">
     <div class="wrapper page-footer__block">
       <div class="page-footer__logo">
-        <a class="page-footer__logo-link" href="">
+        <a class="page-footer__logo-link" href="" aria-label="Логотип магазина Мишка - Перейти на главную страницу">
           <svg width="101px" height="34px">
             <use xlink:href="#logo-footer"></use>
           </svg>
@@ -233,7 +232,7 @@
       </div>
 
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработано в htmlacademy">
           <b class="copyright__text">Разработано</b>
           <svg class="copyright__icon" width="26px" height="34px">
             <use xlink:href="#logo-htmlacademy"></use>

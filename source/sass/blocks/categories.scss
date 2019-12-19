@@ -6,29 +6,49 @@
   background-color: $turquoise;
   display: flex;
 
+  &:first-of-type > .categories__link {
+    &::after {
+      content: "";
+      width: 40px;
+      height: 62px;
+      background-image: url("../img/icon-interior.svg");
+      position: absolute;
+      top: 24px;
+      right: 36px;
+    }
+    background-color: $turquoise;
+  }
+
   &:last-of-type {
     background-color: $turquoise-darken;
   }
 
   &:last-of-type > .categories__link {
+    &::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-toy.svg");
+      position: absolute;
+      top: 22px;
+      right: 26px;
+    }
     background-color: $turquoise-darken;
   }
 
-  &:hover > .categories__link .categories__icon-interior,
-  &:focus > .categories__link .categories__icon-interior,
-  &:hover > .categories__link .categories__icon-toy,
-  &:focus > .categories__link .categories__icon-toy {
-    fill: rgba($blue-green, 0.7);
+  &:hover > .categories__link::after,
+  &:focus > .categories__link::after {
+    opacity: 0.7;
   }
 
-  &:active > .categories__link .categories__text,
-  &:active > .categories__link .categories__icon-interior,
-  &:active > .categories__link .categories__icon-toy,
-  & > .categories__link:active .categories__text,
-  & > .categories__link:active .categories__icon-interior,
-  & > .categories__link:active .categories__icon-toy {
+  &:active > .categories__text,
+  & > .categories__link:active .categories__text {
     color: rgba($white, 0.3);
-    fill: rgba($blue-green, 0.3);
+  }
+
+  &:active > .categories__link::after,
+  & > .categories__link:active::after {
+    opacity: 0.3;
   }
 }
 
@@ -46,20 +66,6 @@
   &:hover {
     transform: translateY(-5px);
   }
-}
-
-.categories__icon-interior {
-  position: absolute;
-  top: 24px;
-  right: 36px;
-  fill: rgba($blue-green, 0.5);
-}
-
-.categories__icon-toy {
-  position: absolute;
-  top: 22px;
-  right: 26px;
-  fill: rgba($blue-green, 0.5);
 }
 
 .categories__text {
@@ -86,7 +92,7 @@
 
     &:last-of-type > .categories__link::after {
       top: 31px;
-      right: 53px;
+      right: 33px;
     }
   }
 
