@@ -1,8 +1,24 @@
+.type__item {
+  display: flex;
+  position: relative;
+
+
+  &:first-of-type > .type__label::before {
+    top: 0;
+  }
+
+  &:first-of-type > .type__input:checked + .type__label::after {
+    top: 12px;
+    left: 12px;
+  }
+}
+
 .type__label {
   @include font(17px, 18px, bold);
   display: flex;
-  position: relative;
-  box-sizing: content-box;
+  align-items: center;
+  min-height: 52px;
+  padding-left: 63px;
   cursor: pointer;
 
   &::before {
@@ -11,7 +27,10 @@
     height: 35px;
     border: 2px solid $black;
     border-radius: 50%;
+    box-sizing: content-box;
     position: absolute;
+    top: 8px;
+    left: 0;
   }
 
   &:hover {
@@ -27,40 +46,6 @@
   }
 }
 
-.type__item {
-  &:first-of-type > .type__label {
-    padding-top: 15px;
-    padding-left: 62px;
-    margin-bottom: 13px;
-  }
-
-  &:last-of-type > .type__label {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 62px;
-  }
-
-  &:first-of-type > .type__label::before {
-    top: 7px;
-    left: 0;
-  }
-
-  &:last-of-type > .type__label::before {
-    top: 2px;
-    left: 0;
-  }
-
-  &:first-of-type > .type__input:checked + .type__label::after {
-    top: 19px;
-    left: 12px;
-  }
-
-  &:last-of-type > .type__input:checked + .type__label::after {
-    top: 15px;
-    left: 12px;
-  }
-}
-
 .type__input {
   &--radio:focus + .type__label::before {
     border: 2px solid $turquoise-hover;
@@ -73,6 +58,9 @@
     border-radius: 50%;
     background-color: $turquoise;
     position: absolute;
+    top: 20px;
+    left: 12px;
+
   }
 }
 
@@ -80,24 +68,19 @@
   .type__label {
     @include font(19px, 18px, bold);
     min-width: 253px;
+    min-height: 64px;
+    padding-left: 82px;
 
     &::before {
       width: 48px;
       height: 48px;
+      left: 1px;
     }
   }
 
   .type__item {
-    &:first-of-type > .type__label {
-      padding-top: 23px;
-      padding-bottom: 23px;
-      padding-left: 82px;
-    }
-
-    &:last-of-type > .type__label {
-      padding-top: 23px;
-      padding-bottom: 23px;
-      padding-left: 82px;
+    &:not(:last-of-type) {
+      margin-bottom: 13px;
     }
 
     &:first-of-type > .type__label::before {
@@ -105,18 +88,8 @@
       left: 1px;
     }
 
-    &:last-of-type > .type__label::before {
-      top: 7px;
-      left: 1px;
-    }
-
     &:first-of-type > .type__input:checked + .type__label::after {
       top: 24px;
-      left: 16px;
-    }
-
-    &:last-of-type > .type__input:checked + .type__label::after {
-      top: 23px;
       left: 16px;
     }
   }
@@ -125,44 +98,24 @@
     &:checked + .type__label::after {
       width: 21px;
       height: 21px;
+      top: 24px;
+      left: 16px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .type__label {
-    &::before {
-      margin-right: 28px;
+  .type__item {
+    &:first-of-type > .type__input:checked + .type__label::after {
+      top: 24px;
+      left: 17px;
     }
   }
 
-  .type__item {
-    &:first-of-type > .type__label {
-      width: 333px;
-    }
-
-    &:last-of-type > .type__label {
-      width: 253px;
-    }
-
-    &:first-of-type > .type__label::before {
-      top: 9px;
-      left: 1px;
-    }
-
-    &:last-of-type > .type__label::before {
-      top: 8px;
-      left: 1px;
-    }
-
-    &:first-of-type > .type__input:checked + .type__label::after {
-      top: 25px;
-      left: 16px;
-    }
-
-    &:last-of-type > .type__input:checked + .type__label::after {
+  .type__input {
+    &:checked + .type__label::after {
       top: 24px;
-      left: 16px;
+      left: 17px;
     }
   }
 }

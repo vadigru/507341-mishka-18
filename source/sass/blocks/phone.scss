@@ -1,5 +1,6 @@
 .phone__item {
   position: relative;
+  margin-bottom: 2px;
 }
 
 .phone__input {
@@ -21,7 +22,6 @@
 
 .phone__label {
   box-shadow: 0 2px 0 0 $black;
-  position: absolute;
   cursor: text;
 
   @include svg-ie-fix;

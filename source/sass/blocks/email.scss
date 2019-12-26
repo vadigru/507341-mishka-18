@@ -1,5 +1,6 @@
 .email__item {
   position: relative;
+  margin-bottom: 2px;
 }
 
 .email__input {
@@ -11,6 +12,7 @@
 
   &:focus + label {
     box-shadow: 0 2px 0 0 $turquoise-hover;
+    cursor: text;
   }
 
   &:focus + label .email__icon {
@@ -20,7 +22,6 @@
 
 .email__label {
   box-shadow: 0 2px 0 0 $black;
-  position: absolute;
   cursor: text;
 
   @include svg-ie-fix;
@@ -51,7 +52,7 @@
 
   .email__input {
     @include font(19px, 18px, normal, $greyish-brown);
-    padding-top: 21px;
+    padding-top: 19px;
     padding-left: 17px;
     padding-bottom: 14px;
     background-color: transparent;

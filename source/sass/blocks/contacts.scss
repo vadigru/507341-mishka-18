@@ -148,6 +148,10 @@
     margin-right: 24px;
   }
 
+  .contacts__text {
+    font-style: normal;
+  }
+
   .contacts__link {
     &::after {
       width: 200px;
@@ -221,6 +225,10 @@
   .contacts__email {
     padding-left: 0;
     margin-right: 0;
+  }
+
+  .contacts__text {
+    font-style: normal;
   }
 
   .contacts__map {
