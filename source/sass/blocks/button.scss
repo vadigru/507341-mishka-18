@@ -5,12 +5,12 @@
   text-transform: uppercase;
   display: block;
   padding-top: 17px;
-  padding-right: 15px;
   padding-bottom: 16px;
-  padding-left: 15px;
+  margin: 0 auto;
   background-color: $white;
   border: 2px solid $greyish-brown;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   &:hover,
   &:focus {

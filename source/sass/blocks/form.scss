@@ -1,34 +1,38 @@
-.order-form {
-  margin-bottom: 54px;
+.form__container {
+  &--type {
+    margin-bottom: 32px;
+  }
+
+  &--color {
+    margin-bottom: 32px;
+  }
+
+  &--name {
+    margin-bottom: 32px;
+  }
+
+  &--phone,
+  &--email {
+    margin-bottom: 34px;
+  }
+
+  &--info {
+    margin-bottom: 5px;
+  }
 }
 
-.order-form__title {
-  @include font(27px, 30px, bold);
-  text-align: center;
-  padding-top: 69px;
-  padding-bottom: 75px;
-  margin: 0;
-  margin-bottom: 22px;
-  background-color: $grey;
-}
-
-.order-form__text {
-  @include font(13px, 24px, normal, $greyish-brown);
-  width: 260px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 24px;
-}
-
-.order-form .fieldset {
+.form__fieldset {
   width: 260px;
   padding: 0;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   border: 0;
 }
 
-.legend {
+.form__legend {
+  @include font(17px, 16px, bold, $turquoise);
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
   position: relative;
 
   &::before {
@@ -40,74 +44,173 @@
     left: 60px;
     border-top: 1px solid $turquoise;
   }
-}
 
-.order-form__heading {
-  @include font(17px, 16px, bold, $turquoise);
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
-}
-
-@media (min-width: $tablet-width) {
-  .order-form {
-    margin-top: -70px;
-    margin-bottom: 49px;
+  &--type {
+    padding-right: 25px;
+    margin-bottom: 19px;
   }
 
-  .order-form__title {
-    @include font(43px, 50px, bold);
-    padding-top: 93px;
-    padding-bottom: 90px;
-    margin-bottom: 64px;
-    position: relative;
-    box-shadow: 0 -1px 0 0 $white-four;
+  &--color {
+    padding-right: 15px;
+    margin-bottom: 25px;
+  }
 
+  &--name {
+    padding-right: 20px;
+    margin-bottom: 27px;
+  }
+
+  &--email {
     &::before {
-      content: "";
-      width: 100%;
-      height: 22px;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: cover;
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      width: 180px;
+      left: 80px;
     }
   }
 
-  .order-form__text {
-    @include font(17px, 30px, normal, $greyish-brown);
-    width: 668px;
-    padding-left: 0;
-    margin: 0 auto;
-    margin-bottom: 49px;
+  &--info {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    &--type {
+      margin-bottom: 45px;
+    }
+
+    &--color {
+      padding-top: 50px;
+      padding-bottom: 26px;
+      margin-bottom: 49px;
+      background-color: $grey;
+    }
+
+    &--phone,
+    &--email {
+      background-color: $grey;
+    }
+
+    &--phone {
+      padding-top: 42px;
+      margin-bottom: 0;
+      background-color: $grey;
+    }
+
+    &--email {
+      padding-top: 19px;
+      padding-bottom: 52px;
+      margin-bottom: 52px;
+    }
+
+    &--info {
+      margin-bottom: 0;
+    }
   }
 
-  .order-form .fieldset {
+  .form__fieldset {
     width: 668px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
 
-  .legend {
+  .form__legend {
     &::before {
       content: none;
+    }
+
+    &--type {
+      padding-top: 25px;
+      padding-right: 0;
+      margin-bottom: 0;
+      margin-right: 130px;
+    }
+
+    &--color {
+      padding-top: 18px;
+      margin-right: 108px;
+      background-color: transparent;
+    }
+
+    &--name {
+      padding-top: 18px;
+      padding-right: 0;
+      margin-right: 125px;
+      margin-bottom: 0;
+    }
+
+    &--phone,
+    &--email {
+      padding-top: 25px;
+    }
+
+    &--phone {
+      margin-right: 136px;
+    }
+
+    &--email {
+      margin-right: 110px;
+    }
+
+    &--info {
+      padding-top: 16px;
+      margin-right: 128px;
+      margin-bottom: 0;
+      background-color: transparent;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .order-form__title {
-    @include font(53px, 57px, bold);
-    padding-top: 93px;
-    padding-bottom: 108px;
-    margin-bottom: 117px;
+  .form__container {
+    &--color {
+      margin-bottom: 49px;
+    }
+
+    &--email {
+      padding-top: 19px;
+      margin-bottom: 52px;
+    }
   }
 
-  .order-form__text {
-    width: 700px;
-    padding-left: 0;
-    margin: 0 auto;
-    margin-bottom: 50px;
+  .form__fieldset {
+    width: 926px;
+
+    &--info {
+      width: 922px;
+    }
+  }
+
+  .form__legend {
+    margin-right: 75px;
+
+    &--color {
+      padding-top: 18px;
+      padding-right: 0;
+      margin-right: 69px;
+      background-color: transparent;
+    }
+
+    &--name {
+      padding-top: 18px;
+      margin-right: 73px;
+    }
+
+    &--phone {
+      margin-right: 81px;
+    }
+
+    &--email {
+      padding-top: 27px;
+      margin-right: 56px;
+    }
+
+    &--info {
+      margin-right: 72px;
+    }
   }
 }

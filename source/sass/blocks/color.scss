@@ -1,0 +1,124 @@
+.color__item {
+  &:not(:last-of-type) {
+    margin-bottom: 22px;
+  }
+}
+
+.color__label {
+  @include font(17px, 18px, bold);
+  position: relative;
+  display: flex;
+  padding-top: 11px;
+  padding-left: 63px;
+  padding-bottom: 10px;
+  box-sizing: content-box;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 36px;
+    height: 35px;
+    border: 2px solid $black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 2px solid $turquoise-hover;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: 2px solid rgba($greyish-brown, 0.3);
+    }
+  }
+}
+
+.color__input {
+  &--checkbox:focus + .color__label::before {
+    border: 2px solid $turquoise-hover;
+  }
+
+  &--checkbox:checked + .color__label::after {
+    content: "";
+    width: 20px;
+    height: 9px;
+    border-left: 2px solid $black;
+    border-bottom: 2px solid $black;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 11px;
+    left: 8px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .color {
+    display: flex;
+    font-display: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .color__item {
+    &:not(:last-of-type) {
+      margin-bottom: 26px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 26px;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: 60px;
+    }
+  }
+
+  .color__label {
+    @include font(19px, 18px, bold, $black);
+    width: 120px;
+    height: 50px;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 81px;
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 48px;
+    }
+  }
+
+  .color__input {
+    &:checked + .color__label::after {
+      width: 28px;
+      height: 14px;
+      top: 14px;
+      left: 13px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .color {
+    justify-content: flex-start;
+  }
+
+  .color__label {
+    &::before {
+      top: 1px;
+    }
+  }
+
+  .color__item {
+    &:nth-of-type(odd),
+    &:nth-of-type(even) {
+      margin-right: 62px;
+    }
+  }
+}

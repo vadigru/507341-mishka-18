@@ -1,0 +1,75 @@
+.email__item {
+  position: relative;
+}
+
+.email__input {
+  @include font(17px, 18px, normal, $greyish-brown);
+  width: 80%;
+  padding-top: 23px;
+  padding-bottom: 16px;
+  border: 0;
+
+  &:focus + label {
+    box-shadow: 0 2px 0 0 $turquoise-hover;
+  }
+
+  &:focus + label .email__icon {
+    fill: $turquoise-hover;
+  }
+}
+
+.email__label {
+  box-shadow: 0 2px 0 0 $black;
+  position: absolute;
+  cursor: text;
+
+  @include svg-ie-fix;
+
+  &:hover,
+  &:active {
+    box-shadow: 0 2px 0 0 $turquoise-hover;
+  }
+
+  &:hover svg,
+  &:active svg {
+    fill: $turquoise-hover;
+  }
+}
+
+.email__icon {
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 4px;
+  fill: rgba($black, 0.2);
+}
+
+@media (min-width: $tablet-width) {
+  .email {
+    width: 500px;
+  }
+
+  .email__input {
+    @include font(19px, 18px, normal, $greyish-brown);
+    padding-top: 21px;
+    padding-left: 17px;
+    padding-bottom: 14px;
+    background-color: transparent;
+  }
+
+  .email__icon {
+    top: 18px;
+    right: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .email {
+    width: 700px;
+  }
+
+  .email__icon {
+    top: 19px;
+    right: 5px;
+  }
+}

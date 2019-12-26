@@ -1,0 +1,47 @@
+.footnote__text {
+  letter-spacing: 0.4px;
+  width: 260px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.footnote__send-btn {
+  width: 258px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .footnote {
+    width: 666px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+  }
+
+  .footnote__text {
+    @include font(17px, 30px, normal, $greyish-brown);
+    text-align: right;
+    letter-spacing: 0;
+    width: 320px;
+    padding-top: 4px;
+    margin-bottom: 0;
+    float: right;
+  }
+
+  .footnote__send-btn {
+    @include font(17px, 16px, bold);
+    width: 226px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footnote {
+    width: 700px;
+  }
+
+  .footnote__send-btn {
+    @include font(17px, 16px, bold);
+  }
+}

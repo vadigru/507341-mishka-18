@@ -8,10 +8,6 @@
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <script>
-    document.createElement( "picture" );
-  </script>
-  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
@@ -21,7 +17,7 @@
   </div>
 
   <header class="page-header">
-    <div class="wrapper page-header__block">
+    <div class="wrapper wrapper--page-header">
       <div class="page-header__top">
         <a class="page-header__link" href="index.html">
           <picture>
@@ -30,11 +26,14 @@
             <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина MISHKA">
           </picture>
         </a>
-        <button class="page-header__menu-toggle menu-btn menu-btn--nojs" type="button">Меню</button>
+        <!-- page-header__menu-toggle--nojs, показывает открытое меню при отсутствии JS -->
+        <!-- page-header__menu-toggle--open, меняет состояние кнопки с "гамбургер" на "крестик" -->
+        <button class="page-header__menu-toggle page-header__menu-toggle--nojs" type="button">Открыть меню</button>
       </div>
-
       <nav class="nav">
-        <ul class="list-no-style nav__list menu menu--nojs">
+        <!-- menu--nojs, скрывает кнопку "гамбургер" при отсутствии JS -->
+        <!-- menu--open, показывает открытое меню -->
+        <ul class="nav__list list-no-style menu menu--nojs">
           <li class="menu__item menu__item--catalog">
             <a class="menu__link">Каталог товаров</a>
           </li>
@@ -42,20 +41,21 @@
             <a class="menu__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="menu__item menu__item--search">
-              <a class="menu__link menu__link--hide" href="" aria-label="Поиск по сайту">
-                  <svg class="menu__icon menu__icon--search" width="17px" height="17px">
-                    <use xlink:href="#icon-search"></use>
-                  </svg>
-                  <span class="menu__link-text">Поиск по сайту</span></a>
-            </li>
-
-            <li class="menu__item menu__item--cart">
-              <a class="menu__link" href="">
+            <a class="menu__link menu__link--hide" href="" aria-label="Поиск по сайту">
+              <svg class="menu__icon menu__icon--search" width="17px" height="17px">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+              <span class="menu__link-text">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="menu__item menu__item--cart">
+            <a class="menu__link" href="">
               <svg class="menu__icon menu__icon--cart" width="20px" height="18px">
                 <use xlink:href="#icon-cart"></use>
               </svg>
-              Корзина:<span class="cart-items-count">&nbsp;пока пуста</span></a>
-            </li>
+              Корзина:<span class="cart-items-count">&nbsp;пока пуста</span>
+            </a>
+          </li>
           <li class="menu__item menu__item--new">
             <a class="menu__link" href="">Новые поступления</a>
           </li>
@@ -70,17 +70,19 @@
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page-shop">
     <section class="catalog">
-      <h2 class="catalog__title">Каталог товаров</h2>
-      <div class="wrapper catalog__block">
-        <ul class="list-no-style catalog__list goods">
+      <div class="catalog__title-wrap">
+        <h2 class="catalog__title">Каталог товаров</h2>
+      </div>
+      <div class="wrapper catalog__container">
+        <ul class="catalog__list list-no-style goods">
           <li class="goods__item">
             <article class="goods__product">
               <div class="goods__description">
-                <h3 class="goods__title">
-                  <a class="goods__title-link" href="">Зайчик-попрыгайчик</a>
-                </h3>
+                <a class="goods__title-link" href="product_id1.html">
+                  <h3 class="goods__title">Зайчик-попрыгайчик</h3>
+                </a>
                 <p class="goods__parameters">Рост 30 см, вес 200 г</p>
                 <div class="goods__buy">
                   <span class="goods__price">1 200 руб.</span>
@@ -91,12 +93,11 @@
                   </a>
                 </div>
               </div>
-              <a class="goods__link-image" href="">
+              <a class="goods__link-image" href="product_id1.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
-
                   <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
                   <img class="goods__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение Зайчик-попрыгайчик">
@@ -104,13 +105,12 @@
               </a>
             </article>
           </li>
-
           <li class="goods__item">
             <article class="goods__product">
               <div class="goods__description">
-                <h3 class="goods__title">
-                  <a class="goods__title-link" href="">Корзинка для белья</a>
-                </h3>
+                <a class="goods__title-link" href="product_id2.html">
+                  <h3 class="goods__title">Корзинка для белья</h3>
+                </a>
                 <p class="goods__parameters">Диаметр 15 см, высота 10 см</p>
                 <div class="goods__buy">
                   <span class="goods__price">690 руб.</span>
@@ -121,12 +121,11 @@
                   </a>
                 </div>
               </div>
-              <a class="goods__link-image" href="">
+              <a class="goods__link-image" href="product_id2.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x,img/photo-bowl-desktop@2x.jpg 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
                   <source type="image/webp" srcset="img/photo-bowl-mobile@1x.jpg 1x, img/photo-bowl-mobile@2x.jpg 2x">
-
                   <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x,img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
                   <img class="goods__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение Корзинка для белья">
@@ -134,13 +133,12 @@
               </a>
             </article>
           </li>
-
           <li class="goods__item">
             <article class="goods__product">
               <div class="goods__description">
-                <h3 class="goods__title">
-                  <a class="goods__title-link" href="">Большая корзинка для игрушек</a>
-                </h3>
+                <a class="goods__title-link" href="product_id3.html">
+                  <h3 class="goods__title">Большая корзинка для&nbsp;игрушек</h3>
+                </a>
                 <p class="goods__parameters">Диаметр 30 см, высота 30 см</p>
                 <div class="goods__buy">
                   <span class="goods__price">1 500 руб.</span>
@@ -151,12 +149,11 @@
                   </a>
                 </div>
               </div>
-              <a class="goods__link-image" href="">
+              <a class="goods__link-image" href="product_id3.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
-
                   <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
                   <img class="goods__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение Большая корзинка для игрушек">
@@ -175,47 +172,45 @@
           <div class="production__container">
             <h3 class="production__title">
               <svg class="production__icon-video" width="32px" height="32px">
-                  <use xlink:href="#icon-video"></use>
+                <use xlink:href="#icon-video"></use>
               </svg>
               <span class="production__title-name">Процесс производства</span>
             </h3>
-          <div class="production__video">
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
-
-              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-              <img class="production__video-image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео ролик о производстве наших товаров">
-            </picture>
-            <button class="production__video-play" type="button">Посмотреть видео</button>
+            <div class="production__video">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                <img class="production__video-image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео ролик о производстве наших товаров">
+              </picture>
+              <button class="production__video-play" type="button">Посмотреть видео</button>
+            </div>
+            <div class="production__description">
+              <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+                появляются наши товары.</p>
+              <p class="production__order">
+                <a class="button production__order-btn" href="form.html">Сделать заказ</a>
+              </p>
+            </div>
           </div>
-          <div class="production__description">
-            <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-              появляются наши товары.</p>
-            <p class="production__order">
-              <a class="button production__order-btn" href="form.html">Сделать заказ</a>
-            </p>
-          </div>
-        </div>
         </div>
       </article>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="wrapper page-footer__block">
-      <div class="page-footer__logo">
-        <a class="page-footer__logo-link" href="" aria-label="Логотип магазина Мишка - Перейти на главную страницу">
+    <div class="wrapper wrapper--page-footer">
+      <div class="page-footer__logo footer-logo">
+        <a class="footer-logo__link" href="index.html" aria-label="Логотип магазина Мишка - Перейти на главную страницу">
           <svg width="101px" height="34px">
             <use xlink:href="#logo-footer"></use>
           </svg>
         </a>
       </div>
-
       <div class="page-footer__social social">
-        <ul class="list-no-style social__list">
+        <ul class="social__list list-no-style">
           <li class="social__item social__item--instagram">
             <a class="social__btn social__btn--instagram" href=""> Mishka в инстаграме
               <svg class="social__icon social__icon--instagram" width="22" height="21">
@@ -223,7 +218,6 @@
               </svg>
             </a>
           </li>
-
           <li class="social__item social__item--facebook">
             <a class="social__btn social__btn--facebook" href="">Mishka в фейсбуке
               <svg class="social__icon social__icon--facebook" width="15" height="28">
@@ -231,17 +225,15 @@
               </svg>
             </a>
           </li>
-
           <li class="social__item social__item--twitter">
-            <a class="social__btn" href="">Mishka в твиттере
-              <svg width="23" height="20">
+            <a class="social__btn social__btn--twitter" href="">Mishka в твиттере
+              <svg class="social__icon social__icon--twitter" width="23" height="20">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработано в htmlacademy">
           <b class="copyright__text">Разработано</b>
@@ -250,38 +242,37 @@
           </svg>
         </a>
       </div>
-
     </div>
   </footer>
 
   <section class="popup popup--close">
-      <div class="wrapper popup__block">
-        <h2 class="popup__title">Добавить в корзину</h2>
-        <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="popup__group">
-            <div class="popup__text">Выберите размер:</div>
-            <ul class="list-no-style popup__list sizes">
-              <li class="sizes__item">
-                <input class="visually-hidden sizes__input" type="radio" name="size" id="size-s" value="size-s">
-                <label class="sizes__label sizes__label--active" for="size-s">S</label>
-              </li>
-              <li class="sizes__item">
-                <input class="visually-hidden sizes__input" type="radio" name="size" id="size-m" value="size-m">
-                <label class="sizes__label" for="size-m">M</label>
-              </li>
-              <li class="sizes__item">
-                <input class="visually-hidden sizes__input" type="radio" name="size" id="size-l" value="size-l">
-                <label class="sizes__label" for="size-l">L</label>
-              </li>
-            </ul>
-          </div>
-          <button class="button popup__btn-add" type="submit">Добавить</button>
-        </form>
-      </div>
-    </section>
+    <div class="wrapper wrapper--popup">
+      <h2 class="popup__title">Добавить в корзину</h2>
+      <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="popup__group">
+          <div class="popup__text">Выберите размер:</div>
+          <ul class="popup__list list-no-style sizes">
+            <li class="sizes__item">
+              <input class="visually-hidden sizes__input" type="radio" name="size" id="size-s" value="size-s">
+              <label class="sizes__label sizes__label--active" for="size-s">S</label>
+            </li>
+            <li class="sizes__item">
+              <input class="visually-hidden sizes__input" type="radio" name="size" id="size-m" value="size-m">
+              <label class="sizes__label" for="size-m">M</label>
+            </li>
+            <li class="sizes__item">
+              <input class="visually-hidden sizes__input" type="radio" name="size" id="size-l" value="size-l">
+              <label class="sizes__label" for="size-l">L</label>
+            </li>
+          </ul>
+        </div>
+        <button class="button popup__btn-add" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
 
+  <script src="js/picturefill.min.js" async></script>
   <script src="js/script.min.js"></script>
 
 </body>
-
 </html>

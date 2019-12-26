@@ -1,7 +1,7 @@
 (function () {
 var menu = document.querySelector('.menu');
-var menuToggle = document.querySelector('.menu-btn');
-var weekProduct = document.querySelector('.top-products');
+var menuToggle = document.querySelector('.page-header__menu-toggle');
+var weekProduct = document.querySelector('.page-main__top-products');
 var goods = document.querySelector('.catalog');
 var modal = document.querySelector('.popup');
 
@@ -9,11 +9,11 @@ var ESC_KEYCODE = 27;
 
 // menu toggle ----------------------------------------------------------------
 
-menuToggle.classList.remove('menu-btn--nojs');
+menuToggle.classList.remove('page-header__menu-toggle--nojs');
 menu.classList.remove('menu--nojs');
 
 var menuClose = function() {
-  menuToggle.classList.remove('menu-btn--open');
+  menuToggle.classList.remove('page-header__menu-toggle--open');
   menu.classList.remove('menu--open');
   document.removeEventListener('keydown', onEscMenuClose);
 };
@@ -25,12 +25,12 @@ var onEscMenuClose = function(evt) {
 };
 
 var onClickToggle = function () {
-  if (!menuToggle.classList.contains('menu-btn--open')) {
-    menuToggle.classList.add('menu-btn--open');
+  if (!menuToggle.classList.contains('page-header__menu-toggle--open')) {
+    menuToggle.classList.add('page-header__menu-toggle--open');
     menu.classList.add('menu--open');
     document.addEventListener('keydown', onEscMenuClose);
   } else {
-    menuToggle.classList.remove('menu-btn--open');
+    menuToggle.classList.remove('page-header__menu-toggle--open');
     menu.classList.remove('menu--open');
   }
 };
@@ -106,7 +106,7 @@ if(contacts) {
   mapInteractive.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6175532833856!2d30.32143807348629!3d59.93848807108508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2slv!4v1576613182756!5m2!1sen!2slv';
   mapInteractive.title = 'Местоположение магазина Мишка на карте';
   mapInteractive.width = '100%';
-  mapInteractive.height = '100%';
+  mapInteractive.height = '455px';
   mapInteractive.style.border = '0';
 }
 

@@ -1,6 +1,6 @@
 .contacts {
   @include font(15px, 30px, normal, $greyish-brown);
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 
 .contacts__title {
@@ -13,8 +13,7 @@
   width: 260px;
   display: flex;
   flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   margin-bottom: 39px;
 }
 
@@ -66,6 +65,10 @@
   display: flex;
 }
 
+.contacts__text {
+  font-style: normal;
+}
+
 .contacts__map {
   min-width: 320px;
   height: 457px;
@@ -94,14 +97,11 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .contacts__write-btn {
-  width: 226px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 256px;
   letter-spacing: 0.9px;
 }
 
@@ -118,13 +118,14 @@
     align-items: center;
     padding-left: 46px;
     margin-bottom: 33px;
-  }
 
-  .contacts__title::after {
-    width: 47px;
-    height: 81px;
-    content: url("../img/icon-flag.svg");
-    padding-right: 53px;
+    &::after {
+      width: 47px;
+      height: 81px;
+      content: url("../img/icon-flag.svg");
+      margin-left: 113px;
+      margin-right: 53px;
+    }
   }
 
   .contacts__data {
@@ -175,8 +176,7 @@
   }
 
   .contacts__write-btn {
-    text-align: center;
-    width: 198px;
+    width: 226px;
     letter-spacing: 0;
   }
 }
@@ -186,33 +186,34 @@
     margin-bottom: 90px;
   }
 
-  .contacts__block {
-    width: 1050px;
+  .contacts__container {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
     position: relative;
   }
 
   .contacts__title {
     @include font(53px, 57px, bold);
+    letter-spacing: -0.5px;
     justify-content: flex-start;
     padding: 0;
     padding-top: 37px;
     width: 51%;
-  }
 
-  .contacts__title::after {
-    padding-top: 5px;
-    padding-left: 63px;
-    margin-right: 6px;
-    order: -1;
+    &::after {
+      content: url("../img/icon-flag.svg");
+      padding-top: 5px;
+      margin-right: 61px;
+      order: -1;
+    }
   }
 
   .contacts__data {
     width: 50%;
     flex-direction: column;
-    padding-left: 175px;
+    padding-left: 225px;
     margin: 0;
     margin-bottom: 64px;
   }
@@ -225,7 +226,7 @@
   .contacts__map {
     width: 525px;
     top: 10px;
-    right: 0;
+    right: 50px;
     position: absolute;
   }
 
@@ -243,12 +244,6 @@
   }
 
   .contacts__write {
-    width: 55%;
-  }
-
-  .contacts__write-btn {
-    width: 196px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 59%;
   }
 }

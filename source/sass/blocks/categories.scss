@@ -12,8 +12,9 @@
       width: 40px;
       height: 62px;
       background-image: url("../img/icon-interior.svg");
+      background-repeat: no-repeat;
       position: absolute;
-      top: 24px;
+      top: 22px;
       right: 36px;
     }
     background-color: $turquoise;
@@ -29,26 +30,12 @@
       width: 60px;
       height: 60px;
       background-image: url("../img/icon-toy.svg");
+      background-repeat: no-repeat;
       position: absolute;
-      top: 22px;
+      top: 20px;
       right: 26px;
     }
     background-color: $turquoise-darken;
-  }
-
-  &:hover > .categories__link::after,
-  &:focus > .categories__link::after {
-    opacity: 0.7;
-  }
-
-  &:active > .categories__text,
-  & > .categories__link:active .categories__text {
-    color: rgba($white, 0.3);
-  }
-
-  &:active > .categories__link::after,
-  & > .categories__link:active::after {
-    opacity: 0.3;
   }
 }
 
@@ -57,14 +44,28 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  padding-top: 27px;
-  padding-bottom: 28px;
+  padding-top: 25px;
+  padding-bottom: 30px;
   padding-left: 29px;
   background-color: $turquoise;
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: translateY(-5px);
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active > .categories__text,
+  & > .categories__text:active {
+    color: rgba($white, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
@@ -92,7 +93,7 @@
 
     &:last-of-type > .categories__link::after {
       top: 31px;
-      right: 33px;
+      right: 35px;
     }
   }
 

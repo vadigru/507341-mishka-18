@@ -1,0 +1,39 @@
+.info__text {
+  @include font(17px, 18px, normal, $greyish-brown);
+  width: 226px;
+  height: 108px;
+  font-family: $font-primary;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 16px;
+  padding-left: 15px;
+  border: 2px solid $black;
+  box-sizing: content-box;
+  overflow: auto;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $turquoise-hover;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .info {
+    width: 466px;
+    margin-bottom: 47px;
+  }
+
+  .info__text {
+    @include font(19px, 18px, normal, $greyish-brown);
+    width: 100%;
+    padding-top: 12px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .info {
+    width: 666px;
+    margin-bottom: 43px;
+  }
+}

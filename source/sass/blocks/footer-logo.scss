@@ -1,0 +1,34 @@
+.footer-logo {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .footer-logo {
+    display: block;
+    margin-right: 160px;
+    padding-left: 50px;
+  }
+
+  .footer-logo__link {
+    position: relative;
+
+    &::before {
+      @include svg-ie-fix;
+    }
+
+    &[href]:hover,
+    &[href]:focus {
+      fill: $turquoise-lite;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer-logo {
+    margin-right: 82px;
+  }
+}

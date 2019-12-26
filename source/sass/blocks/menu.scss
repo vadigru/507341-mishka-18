@@ -2,18 +2,14 @@
   @include font(17px, 24px, bold);
   display: none;
   flex-direction: column;
-}
 
-.menu--open {
-  display: block;
-}
+  &--open {
+    display: block;
+  }
 
-.menu-btn--nojs {
-  display: none;
-}
-
-.menu--nojs {
-  display: block;
+  &--nojs {
+    display: block;
+  }
 }
 
 .menu__item {

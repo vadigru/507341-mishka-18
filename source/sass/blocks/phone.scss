@@ -1,0 +1,76 @@
+.phone__item {
+  position: relative;
+}
+
+.phone__input {
+  @include font(19px, 18px, normal, $greyish-brown);
+  letter-spacing: -1.2px;
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 14px;
+  border: 0;
+
+  &:focus + label {
+    box-shadow: 0 2px 0 0 $turquoise-hover;
+  }
+
+  &:focus + label .phone__icon {
+    fill: $turquoise-hover;
+  }
+}
+
+.phone__label {
+  box-shadow: 0 2px 0 0 $black;
+  position: absolute;
+  cursor: text;
+
+  @include svg-ie-fix;
+
+  &:hover,
+  &:active {
+    box-shadow: 0 2px 0 0 $turquoise-hover;
+  }
+
+  &:hover svg,
+  &:active svg {
+    fill: $turquoise-hover;
+  }
+}
+
+.phone__icon {
+  cursor: pointer;
+  position: absolute;
+  top: 17px;
+  right: 8px;
+  fill: rgba($black, 0.2);
+}
+
+@media (min-width: $tablet-width) {
+  .phone {
+    width: 500px;
+  }
+
+  .phone__input {
+    @include font(19px, 18px, normal, $greyish-brown);
+    padding-top: 21px;
+    padding-left: 17px;
+    padding-bottom: 14px;
+    background-color: transparent;
+  }
+
+  .phone__icon {
+    top: 18px;
+    right: 26px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .phone {
+    width: 700px;
+  }
+
+  .phone__icon {
+    top: 19px;
+    right: 9px;
+  }
+}

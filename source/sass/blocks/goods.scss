@@ -6,8 +6,7 @@
   display: flex;
   flex-direction: column;
   width: 260px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   outline: 1px solid $white-four;
 
   &:hover .goods__description,
@@ -29,15 +28,11 @@
 
 .goods__title {
   @include font(17px, 24px, bold);
-  width: auto;
   padding-top: 28px;
-  padding-left: 28px;
+  padding-right: 27px;
+  padding-left: 27px;
   margin: 0;
   margin-bottom: 5px;
-}
-
-.goods__item:last-of-type .goods__title {
-  width: 200px;
 }
 
 .goods__title-link {
@@ -47,13 +42,13 @@
   }
 
   &:active {
-    pointer-events: none;
     opacity: 0.3;
   }
 }
 
 .goods__parameters {
   @include font(13px, 30px, normal, $greyish-brown);
+  padding-right: 29px;
   padding-left: 29px;
   margin: 0;
   margin-bottom: 20px;
@@ -65,9 +60,8 @@
   justify-content: space-between;
   width: 204px;
   padding-top: 21px;
-  margin-right: auto;
+  margin: 0 auto;
   margin-bottom: 27px;
-  margin-left: auto;
   box-shadow: 0 -1px 0 $white-four;
   position: relative;
 }
@@ -83,7 +77,7 @@
   background-color: transparent;
   position: absolute;
   top: 18px;
-  right: -7px;
+  right: -5px;
   cursor: pointer;
 
   &:hover .goods__cart-icon,
@@ -116,9 +110,8 @@
     justify-content: center;
     align-items: stretch;
     width: 668px;
-    margin-right: auto;
+    margin: 0 auto;
     margin-bottom: 54px;
-    margin-left: auto;
   }
 
   .goods__description {
@@ -136,10 +129,6 @@
     margin-bottom: 8px;
   }
 
-  .goods__item:last-of-type .goods__title {
-    width: 230px;
-  }
-
   .goods__parameters {
     @include font(15px, 30px, normal, $greyish-brown);
     padding-left: 27px;
@@ -153,6 +142,7 @@
 
   .goods__price {
     @include font(17px, 24px, bold);
+    padding-right: 50px;
   }
 
   .goods__image {
@@ -165,35 +155,17 @@
   .goods {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .goods__item {
     margin-bottom: 0;
   }
 
-  .goods__item:first-of-type .goods__title {
-    width: auto;
-  }
-
-  .goods__item:not(:first-of-type) .goods__title {
-    padding-left: 26px;
-  }
-
   .goods__item:nth-child(2) .goods__title {
-    width: auto;
-    margin-bottom: 6px;
-  }
-
-  .goods__item:not(:first-of-type) .goods__parameters {
-    padding-left: 25px;
-  }
-
-  .goods__item:first-of-type {
-    padding-left: 50px;
-  }
-
-  .goods__item:last-of-type {
-    padding-right: 50px;
+    margin-bottom: 4px;
   }
 
   .goods__product {
@@ -218,7 +190,7 @@
 
   .goods__cart {
     top: 18px;
-    right: -5px;
+    right: -3px;
   }
 
   .goods__image {
