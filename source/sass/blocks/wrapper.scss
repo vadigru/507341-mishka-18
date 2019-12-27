@@ -14,7 +14,7 @@
   }
 
   &--popup {
-    height: 336px;
+    min-height: 336px;
     position: absolute;
     top: calc(50% - 168px);
     left: calc(50% - 160px);
@@ -37,7 +37,7 @@
 
     &--popup {
       width: 566px;
-      height: 336px;
+      min-height: 336px;
       left: calc(50% - 283px);
     }
   }
@@ -53,7 +53,7 @@
 
     &--popup {
       width: 566px;
-      height: 336px;
+      min-height: 336px;
       left: calc(50% - 283px);
     }
   }

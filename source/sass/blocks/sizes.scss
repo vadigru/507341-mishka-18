@@ -2,21 +2,29 @@
   width: 260px;
   display: flex;
   font-display: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .sizes__item {
   @include font(17px, 16px, bold, $greyish-brown);
+  margin-bottom: 7px;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 7px;
+  }
 }
 
 .sizes__label {
+  width: 78px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 76px;
-  height: 46px;
   border: 2px solid rgba($greyish-brown, 0.1);
+  box-sizing: content-box;
+  cursor: pointer;
 
   &:hover {
     border: 2px solid rgba($greyish-brown, 0.3);
