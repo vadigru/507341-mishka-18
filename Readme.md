@@ -2,7 +2,8 @@
 
 * Студент: [Vadim Grunenko](https://up.htmlacademy.ru/adaptive/18/user/507341).
 * Наставник: [Никита Сигов](https://htmlacademy.ru/profile/crazer).
-* Онлайн версия: https://mishka-inky.vercel.app
+* Демо: https://mishka-inky.vercel.app
+
 ---
 
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
